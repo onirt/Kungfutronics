@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62107d832ff2f6048a1e81eb069fb42d, type: 3}
+  m_Name: playerModel
+  m_EditorClassIdentifier: 
+  fireUp: {fileID: 8300000, guid: 9c91cda6ad13e7b48a26356164744dcd, type: 3}
+  damage: {fileID: 8300000, guid: 1f4fc5437cbf3664f914f0387739e983, type: 3}
+  overload: {fileID: 8300000, guid: 0724b3ab858b4af42b24659091217dcf, type: 3}
+  powerPrefab: {fileID: 6371758930964261590, guid: f0ab04b4d860e6a4db5235bc052048fe,
+    type: 3}

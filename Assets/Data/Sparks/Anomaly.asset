@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a49d7a50dca967b4fa02c661c4d35c41, type: 3}
+  m_Name: Anomaly
+  m_EditorClassIdentifier: 
+  type: 20
+  life: 1.218881
+  defaultLife: 1.218881
+  minThreshold: 0.1901442
+  maxThreshold: 3.619267
+  scale: 0.2
+  defaultScale: 0.2
+  minScale: 0.1
+  maxScale: 1
+  points: 1
+  force: 650
+  prefab: {fileID: 5077340220014035775, guid: 8a1544fa162fcb449aea478135010e54, type: 3}
+  debug: 0
+  sound: {fileID: 8300000, guid: c07b0048ef64b2d44b8f6a031a85eb70, type: 3}

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d013a50c0569f94429c3b9f8c42fa33b, type: 3}
+  m_Name: LevelCustom
+  m_EditorClassIdentifier: 
+  plataformColor: {r: 0, g: 0, b: 1, a: 0}
+  fogColor: {r: 0.39607844, g: 0.23137255, b: 0.43529412, a: 1}
+  skyColor: {r: 0.5019608, g: 0.5019608, b: 0.5019608, a: 0.5019608}
+  sparkDataModel: {fileID: 11400000, guid: 4c128d85fe2f447408cc15cdb52081f5, type: 2}
+  delay: 1
+  offset: 0.2
+  threshold: 0.212
+  scale: 0.1
+  enemies: 1
+  MusicSyc: 1
+  level: 0
