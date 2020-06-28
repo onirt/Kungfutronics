@@ -28,7 +28,7 @@ public class EnemiesManagerModel : ScriptableObject
         yield return new WaitForSeconds(delay);
 
         Transform newenemy = Instantiate(enemyPrefab, GetNewPosition(), Quaternion.identity).transform;
-        Vector3 lookAt = (GameManager.obj.player.position - newenemy.position);
+        Vector3 lookAt = (GamePlayManager.obj.player.position - newenemy.position);
         newenemy.forward = new Vector3(lookAt.x, 0, lookAt.z).normalized;
         newenemy.name = "Enemy_Cristal_" + uniqIndex;
         uniqIndex++;

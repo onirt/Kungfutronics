@@ -6,15 +6,16 @@ public class EnemyBehaviour : MonoBehaviour
 {
     [SerializeField]
     bool passive;
-    [SerializeField]
+    /*[SerializeField]
     SparkModel virus;
+    */
     Animator animator;
     float timer = 0;
     [SerializeField]
     Renderer _render;
     [SerializeField]
     float threshold;
-    ParticleSeeker particleSeeker; 
+    //ParticleSeeker particleSeeker; 
     Transform closest = null;
 
     public int healt = 100;
@@ -26,7 +27,7 @@ public class EnemyBehaviour : MonoBehaviour
         float randomIdleStart = Random.Range(0, animator.GetCurrentAnimatorStateInfo(0).length);
         animator.Play("Idle", 0, randomIdleStart);
         timer = Random.Range(0,threshold);
-        particleSeeker = GetComponentInChildren<ParticleSeeker>();
+        //particleSeeker = GetComponentInChildren<ParticleSeeker>();
         //Invoke("TestSpawn", 2);
     }
 
@@ -38,7 +39,7 @@ public class EnemyBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.obj.gameStatus != GameManager.GameStatus.Started || passive)
+        if (GamePlayManager.obj.gameStatus != GamePlayManager.GameStatus.Started || passive)
         {
             return;
         }
@@ -52,17 +53,17 @@ public class EnemyBehaviour : MonoBehaviour
                 float mini = 99999;
                 foreach (GameObject spark in sparks)
                 {
-                    Rigidbody sparkRigidbody = spark.GetComponent<Rigidbody>();
-                    if (sparkRigidbody != null && !sparkRigidbody.useGravity && spark.GetComponent<NotSparkBehaviour>() == null) {
+                    //Rigidbody sparkRigidbody = spark.GetComponent<Rigidbody>();
+                    //if (sparkRigidbody != null && !sparkRigidbody.useGravity && spark.GetComponent<NotSparkBehaviour>() == null) {
                         float distance = Vector3.Distance(transform.position, spark.transform.position);
                         if (distance < mini)
                         {
                             mini = distance;
                             closest = spark.transform;
                         }
-                    }
+                    //}
                 }
-                if (closest != null)
+                /*if (closest != null)
                 {
                     particleSeeker.target = closest;
                     transform.LookAt(new Vector3(closest.position.x, transform.position.y, closest.position.z));
@@ -71,7 +72,9 @@ public class EnemyBehaviour : MonoBehaviour
                     closest.gameObject.AddComponent<NotSparkBehaviour>().ChangeColor();
                     closest.gameObject.GetComponent<SparkBehaviour>().sparkModel = virus;
 
-                }
+                }*/
+                if (closest == null) closest = GamePlayManager.obj.player;
+                StartAttack();
             }
             else if (closest != null)
             {
@@ -79,6 +82,15 @@ public class EnemyBehaviour : MonoBehaviour
             }
             
         }
+    }
+    [SerializeField]
+    GameObject virus;
+    protected virtual void StartAttack()
+    {
+        busy = true;
+        transform.LookAt(new Vector3(closest.position.x, transform.position.y, closest.position.z));
+        animator.SetTrigger("Cast");
+       
     }
     private void OnParticleTrigger()
     {
@@ -96,8 +108,8 @@ public class EnemyBehaviour : MonoBehaviour
         if (healt <= 0)
         {
             animator.SetTrigger("Death");
-            GameManager.obj.SetPoints(1000);
-            GameManager.obj.SpawnNewEnemy(name);
+            GamePlayManager.obj.SetPoints(1000);
+            GamePlayManager.obj.SpawnNewEnemy(name);
             Destroy(gameObject, 4);
         }
         else
@@ -105,8 +117,10 @@ public class EnemyBehaviour : MonoBehaviour
             animator.SetTrigger("Damage");
         }
         Color newcolor = Color.Lerp(Color.white, Color.red, healt / 10f);
-        _render.material.color = newcolor;
-        _render.material.SetColor("_MyColor", newcolor);
+        //_render.material.color = newcolor;
+
+        _render.material.SetColor("Color_1B56DF8C", newcolor);
+        _render.material.SetColor("Color_1DE7838", newcolor);
     }
     /*private void OnCollisionEnter(Collision collision)
     {
@@ -123,8 +137,12 @@ public class EnemyBehaviour : MonoBehaviour
     }*/
 
     public void AttackEvent()
-    { 
-        particleSeeker._particleSystem.Play();
+    {
+        //particleSeeker._particleSystem.Play();
+        for (int i = 0; i < GamePlayManager.obj.level; i++)
+        {
+            Instantiate(virus, transform.position + transform.forward * 2 + transform.up, Quaternion.identity);
+        }
     }
 
     public void ReadyEvent()
@@ -133,7 +151,7 @@ public class EnemyBehaviour : MonoBehaviour
         busy = false;
         timer = 0;
         threshold = Random.Range(threshold, threshold*2);
-        particleSeeker._particleSystem.Stop();
+        //particleSeeker._particleSystem.Stop();
 
     }
 }

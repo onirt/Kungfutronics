@@ -9,13 +9,17 @@ public class PathBehaviour : MonoBehaviour
 
     public PathModel pathModel;
 
+
     [SerializeField]
     private bool haveFreePass = false;
     [SerializeField]
     private float speed = 1f;
+
     //private float distanceTravelled;
     private int currentPoint;
     private bool stop;
+
+    public BH_SpawnSpark spawnSpark;
 
     void Start()
     {
@@ -30,7 +34,7 @@ public class PathBehaviour : MonoBehaviour
     void Update()
     {
         //if (stop) return;
-        if ((GameManager.isPlaying() || haveFreePass) && !stop)
+        if ((GamePlayManager.isPlaying() || haveFreePass) && !stop)
         {
             if (pathModel == null) return;
             //distanceTravelled += speed * Time.deltaTime;
@@ -40,10 +44,9 @@ public class PathBehaviour : MonoBehaviour
                 currentPoint++;
                 if (currentPoint >= pathModel.points.Length)
                 {
+                    spawnSpark.RestoreColors();
                     stop = true;
-                    if (reached != null){
-                        reached();
-                    }
+                    reached?.Invoke();
                 }
             }
         }
@@ -51,6 +54,10 @@ public class PathBehaviour : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.tag == "Respawn")
+        {
+            spawnSpark = other.GetComponent<BH_SpawnSpark>();
+            spawnSpark.StartColors();
+        }
     }
 }

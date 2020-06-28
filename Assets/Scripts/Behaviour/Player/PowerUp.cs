@@ -13,7 +13,7 @@ public class PowerUp : MonoBehaviour
     }
     private void Update()
     {
-        Transform player = GameManager.obj.player;
+        Transform player = GamePlayManager.obj.player;
         transform.LookAt(new Vector3(player.position.x,transform.position.y,player.position.z));
     }
     private void OnParticleCollision(GameObject other)

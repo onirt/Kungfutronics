@@ -5,6 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "SpectrumColor", menuName = "Spectrums/SpectrumColor", order = 2)]
 public class AudioSpectrumColorModel : AudioSpectrumModel
 {
+    public delegate void Action(float intensity);
+    public Action intensityAction;
     private float r;
     private float g;
     private float b;
@@ -15,10 +17,11 @@ public class AudioSpectrumColorModel : AudioSpectrumModel
     public Material[] materials;
     private static float[] intensities;
     public static bool isUpdated;
+    public int selectedIntensity;
     public override void Initiate()
     {
         SetOriginal();
-        GameManager.obj.takedDamage += TakedDamage;
+        GamePlayManager.obj.takedDamage += TakedDamage;
 
         if (intensities == null)
         intensities = new float[materials.Length];
@@ -36,8 +39,8 @@ public class AudioSpectrumColorModel : AudioSpectrumModel
         {
             //float colorFactor = (materials.Length / (i + 1f));
             Color newColor = new Color(r, g, b, 1.0f);
-            materials[i].color = newColor;
-            materials[i].SetColor("_EmissionColor", color);
+            //materials[i].color = newColor;
+            materials[i].SetColor("Color_DADA8D09", color);
         }
     }
     protected override int GetLength()
@@ -53,8 +56,11 @@ public class AudioSpectrumColorModel : AudioSpectrumModel
             scaleFactor = i * i * 10f + 1;
             Color colorInensity = new Color(intensities[i] * r * scaleFactor, intensities[i] * g * scaleFactor, intensities[i] * b * scaleFactor);
             //Debug.Log(i + ".- " + materials[i].name +  " intensity: " + intensities[i] + " colorInensity: " + colorInensity.ToString());
-            materials[i].SetColor("_EmissionColor", colorInensity);
-
+            materials[i].SetColor("Color_DADA8D09", colorInensity);
+            if (selectedIntensity == i)
+            {
+                intensityAction?.Invoke(intensities[i]);
+            }
         }
     }
     private void SetOriginal()
@@ -98,7 +104,7 @@ public class AudioSpectrumColorModel : AudioSpectrumModel
 
     public override void Finish(){
 
-        GameManager.obj.takedDamage -= TakedDamage;
+        GamePlayManager.obj.takedDamage -= TakedDamage;
 
     }
 }

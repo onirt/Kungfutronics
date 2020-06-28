@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Anomaly
   m_EditorClassIdentifier: 
   type: 20
-  life: 1.218881
+  life: 10
   defaultLife: 1.218881
   minThreshold: 0.1901442
   maxThreshold: 3.619267
@@ -23,6 +23,6 @@ MonoBehaviour:
   maxScale: 1
   points: 1
   force: 650
-  prefab: {fileID: 5077340220014035775, guid: 8a1544fa162fcb449aea478135010e54, type: 3}
+  prefab: {fileID: 3408246320700284212, guid: 87a434fad21e39e4da1890619a33e45b, type: 3}
   debug: 0
   sound: {fileID: 8300000, guid: c07b0048ef64b2d44b8f6a031a85eb70, type: 3}

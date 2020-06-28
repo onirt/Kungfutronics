@@ -20,7 +20,7 @@ public class NotSparkBehaviour : MonoBehaviour
 
     private void Electrocute()
     {
-        GameManager.obj.Damage(GetComponent<SparkBehaviour>().sparkModel.points, GameManager.obj.playerModel.damage);
+        GamePlayManager.obj.Damage(GetComponent<SparkBehaviour>().sparkModel.points, GamePlayManager.obj.playerModel.damage);
         Destroy(gameObject);
     }
     public void ChangeColor()

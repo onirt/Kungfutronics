@@ -1,0 +1,730 @@
+fileFormatVersion: 2
+guid: 1a1a685c0776c054ea89c4df36c4af76
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Building_1
+    100004: Building_1_1
+    100006: buildt_1
+    100008: City_2_1
+    100010: Cube
+    100012: Cube_2
+    100014: Cube_4
+    100016: Cube_5
+    100018: Gemi_kule
+    100020: Gemi_kule_1
+    100022: Gemi_kule_2
+    100024: Gemi_kule_3
+    100026: igne_kule
+    100028: igne_kule_1
+    100030: igne_kule_2
+    100032: igne_kule_3
+    100034: "K\xFC\xE7\xFCk_kule"
+    100036: "K\xFC\xE7\xFCk_kule_2"
+    100038: "K\xFC\xE7\xFCk_kule_3"
+    100040: Null_1_2
+    100042: Obus_kule_2
+    100044: "Ob\xFCs_kule"
+    100046: "Ob\xFCs_kule_1"
+    100048: "Ob\xFCs_kule_3"
+    100050: woza_kule_2
+    100052: wozo_kule
+    100054: "\u015Eekil_kule"
+    100056: "\u015Eekil_kule_1"
+    100058: "\u015Eekil_kule_2"
+    100060: "\u015Eekil_kule_3"
+    100062: "\u015Eekil_kule_4"
+    100064: "\u015Eekil_kule_5"
+    100066: "\u015Eekil_kule_6"
+    100068: "\u015Eekil_kule_7"
+    100070: "\u015Fukul_bina"
+    100072: "\u015Fukul_bina_1"
+    100074: "\u015Fukul_bina_2"
+    100076: "\u015Fukul_bina_3"
+    100078: "\u015Fukul_bina_4"
+    100080: "\u015Fukul_bina_5"
+    100082: "\u015Fukul_bina_6"
+    100084: "\u015Fukul_bina_7"
+    400000: //RootNode
+    400002: Building_1
+    400004: Building_1_1
+    400006: buildt_1
+    400008: City_2_1
+    400010: Cube
+    400012: Cube_2
+    400014: Cube_4
+    400016: Cube_5
+    400018: Gemi_kule
+    400020: Gemi_kule_1
+    400022: Gemi_kule_2
+    400024: Gemi_kule_3
+    400026: igne_kule
+    400028: igne_kule_1
+    400030: igne_kule_2
+    400032: igne_kule_3
+    400034: "K\xFC\xE7\xFCk_kule"
+    400036: "K\xFC\xE7\xFCk_kule_2"
+    400038: "K\xFC\xE7\xFCk_kule_3"
+    400040: Null_1_2
+    400042: Obus_kule_2
+    400044: "Ob\xFCs_kule"
+    400046: "Ob\xFCs_kule_1"
+    400048: "Ob\xFCs_kule_3"
+    400050: woza_kule_2
+    400052: wozo_kule
+    400054: "\u015Eekil_kule"
+    400056: "\u015Eekil_kule_1"
+    400058: "\u015Eekil_kule_2"
+    400060: "\u015Eekil_kule_3"
+    400062: "\u015Eekil_kule_4"
+    400064: "\u015Eekil_kule_5"
+    400066: "\u015Eekil_kule_6"
+    400068: "\u015Eekil_kule_7"
+    400070: "\u015Fukul_bina"
+    400072: "\u015Fukul_bina_1"
+    400074: "\u015Fukul_bina_2"
+    400076: "\u015Fukul_bina_3"
+    400078: "\u015Fukul_bina_4"
+    400080: "\u015Fukul_bina_5"
+    400082: "\u015Fukul_bina_6"
+    400084: "\u015Fukul_bina_7"
+    2100000: Mat.11.1
+    2100002: Mat.1.1
+    2100004: Mat.14.1
+    2100006: No Name
+    2100008: Mat
+    2100010: Mat.11.1.1
+    2100012: Mat.1.1.1
+    2100014: Mat.2
+    2100016: Mat.11.1.2
+    2100018: Mat.14.1.4
+    2100020: Mat.1.1.2
+    2100022: Mat.14.1.1
+    2100024: Mat.14.1.5
+    2100026: Mat.1.1.3
+    2100028: Mat.4
+    2100030: Mat.14.1.6
+    2100032: Mat.1.1.4
+    2100034: Mat.11.1.3
+    2100036: Mat.14.1.7
+    2100038: Mat.1.1.5
+    2100040: Mat.14.1.2
+    2100042: Mat.14.1.8
+    2100044: Mat.5
+    2100046: Mat.14.1.9
+    2100048: Mat.11.1.4
+    2100050: Mat.14.1.10
+    2100052: Mat.11.1.5
+    2100054: Mat.14.1.11
+    2100056: Mat.6
+    2100058: Mat.14.1.12
+    2100060: Mat.14.1.13
+    2100062: Mat.11.1.6
+    2100064: Mat.14.1.14
+    2100066: Mat.7
+    2100068: Mat.14.1.15
+    2100070: Mat.14.1.3
+    2100072: Mat.14.1.16
+    2100074: Mat.8
+    2100076: Mat.1.1.6
+    2100078: Mat.11.1.7
+    2100080: Mat.1.1.7
+    2100082: Mat.1.1.8
+    2100084: Mat.1.1.9
+    2100086: Mat.1.1.10
+    2100088: Mat.1.1.11
+    2100090: Mat.9
+    2100092: Mat.1.1.12
+    2100094: Mat.11.1.8
+    2100096: Mat.1.1.13
+    2100098: Mat.10
+    2100100: Mat.1.1.14
+    2100102: Mat.1.1.15
+    2100104: Mat.1.1.16
+    2100106: Mat.11.1.9
+    2100108: Mat.1.1.17
+    2100110: Mat.11
+    2100112: Mat.1.1.18
+    2100114: Mat.1.1.19
+    2100116: Mat.1.1.20
+    2100118: Mat.11.1.10
+    2100120: Mat.1.1.21
+    2100122: Mat.12
+    2100124: Mat.1.1.22
+    2100126: Mat.1.1.23
+    2100128: Mat.11.1.11
+    2100130: Mat.1.1.24
+    2100132: Mat.1.1.25
+    2100134: Mat.13
+    2100136: Mat.1.1.26
+    2100138: Mat.1.1.27
+    2100140: Mat.11.1.12
+    2100142: Mat.1.1.28
+    2100144: Mat.1.1.29
+    2300000: Building_1
+    2300002: Building_1_1
+    2300004: Cube
+    2300006: Cube_2
+    2300008: Cube_4
+    2300010: Cube_5
+    2300012: Gemi_kule
+    2300014: Gemi_kule_1
+    2300016: Gemi_kule_2
+    2300018: Gemi_kule_3
+    2300020: igne_kule
+    2300022: igne_kule_1
+    2300024: igne_kule_2
+    2300026: igne_kule_3
+    2300028: "K\xFC\xE7\xFCk_kule"
+    2300030: "K\xFC\xE7\xFCk_kule_2"
+    2300032: "K\xFC\xE7\xFCk_kule_3"
+    2300034: Obus_kule_2
+    2300036: "Ob\xFCs_kule"
+    2300038: "Ob\xFCs_kule_1"
+    2300040: "Ob\xFCs_kule_3"
+    2300042: woza_kule_2
+    2300044: wozo_kule
+    2300046: "\u015Eekil_kule"
+    2300048: "\u015Eekil_kule_1"
+    2300050: "\u015Eekil_kule_2"
+    2300052: "\u015Eekil_kule_3"
+    2300054: "\u015Eekil_kule_4"
+    2300056: "\u015Eekil_kule_5"
+    2300058: "\u015Eekil_kule_6"
+    2300060: "\u015Eekil_kule_7"
+    2300062: "\u015Fukul_bina"
+    2300064: "\u015Fukul_bina_1"
+    2300066: "\u015Fukul_bina_2"
+    2300068: "\u015Fukul_bina_3"
+    2300070: "\u015Fukul_bina_4"
+    2300072: "\u015Fukul_bina_5"
+    2300074: "\u015Fukul_bina_6"
+    2300076: "\u015Fukul_bina_7"
+    3300000: Building_1
+    3300002: Building_1_1
+    3300004: Cube
+    3300006: Cube_2
+    3300008: Cube_4
+    3300010: Cube_5
+    3300012: Gemi_kule
+    3300014: Gemi_kule_1
+    3300016: Gemi_kule_2
+    3300018: Gemi_kule_3
+    3300020: igne_kule
+    3300022: igne_kule_1
+    3300024: igne_kule_2
+    3300026: igne_kule_3
+    3300028: "K\xFC\xE7\xFCk_kule"
+    3300030: "K\xFC\xE7\xFCk_kule_2"
+    3300032: "K\xFC\xE7\xFCk_kule_3"
+    3300034: Obus_kule_2
+    3300036: "Ob\xFCs_kule"
+    3300038: "Ob\xFCs_kule_1"
+    3300040: "Ob\xFCs_kule_3"
+    3300042: woza_kule_2
+    3300044: wozo_kule
+    3300046: "\u015Eekil_kule"
+    3300048: "\u015Eekil_kule_1"
+    3300050: "\u015Eekil_kule_2"
+    3300052: "\u015Eekil_kule_3"
+    3300054: "\u015Eekil_kule_4"
+    3300056: "\u015Eekil_kule_5"
+    3300058: "\u015Eekil_kule_6"
+    3300060: "\u015Eekil_kule_7"
+    3300062: "\u015Fukul_bina"
+    3300064: "\u015Fukul_bina_1"
+    3300066: "\u015Fukul_bina_2"
+    3300068: "\u015Fukul_bina_3"
+    3300070: "\u015Fukul_bina_4"
+    3300072: "\u015Fukul_bina_5"
+    3300074: "\u015Fukul_bina_6"
+    3300076: "\u015Fukul_bina_7"
+    4300000: Building_1
+    4300002: Building_1_1
+    4300004: "Ob\xFCs_kule"
+    4300006: "Ob\xFCs_kule_1"
+    4300008: Obus_kule_2
+    4300010: "Ob\xFCs_kule_3"
+    4300012: "K\xFC\xE7\xFCk_kule"
+    4300014: "K\xFC\xE7\xFCk_kule_2"
+    4300016: "K\xFC\xE7\xFCk_kule_3"
+    4300018: wozo_kule
+    4300020: woza_kule_2
+    4300022: igne_kule
+    4300024: igne_kule_1
+    4300026: igne_kule_2
+    4300028: igne_kule_3
+    4300030: Gemi_kule
+    4300032: Gemi_kule_1
+    4300034: Gemi_kule_2
+    4300036: Gemi_kule_3
+    4300038: Cube_2
+    4300040: Cube_5
+    4300042: Cube
+    4300044: Cube_4
+    4300046: "\u015Eekil_kule"
+    4300048: "\u015Eekil_kule_1"
+    4300050: "\u015Eekil_kule_2"
+    4300052: "\u015Eekil_kule_3"
+    4300054: "\u015Eekil_kule_4"
+    4300056: "\u015Eekil_kule_5"
+    4300058: "\u015Eekil_kule_6"
+    4300060: "\u015Eekil_kule_7"
+    4300062: "\u015Fukul_bina"
+    4300064: "\u015Fukul_bina_1"
+    4300066: "\u015Fukul_bina_2"
+    4300068: "\u015Fukul_bina_3"
+    4300070: "\u015Fukul_bina_4"
+    4300072: "\u015Fukul_bina_5"
+    4300074: "\u015Fukul_bina_6"
+    4300076: "\u015Fukul_bina_7"
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat
+    second: {fileID: 2100000, guid: b0df6b7488166b343959759bd11438da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.1.1
+    second: {fileID: 2100000, guid: cf97b57de35d3924ab66a2f593861e9b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.1.1.1
+    second: {fileID: 2100000, guid: 5ff5c2dda1fbfe943b577d5b3ed5a57b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.1.1.10
+    second: {fileID: 2100000, guid: 16354d6fd638ef04d86eb63ededf383b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.1.1.11
+    second: {fileID: 2100000, guid: 4b038c63e0bc5ac4faf0b00af645dbd4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.1.1.12
+    second: {fileID: 2100000, guid: cc2dd121a6be18d45891fa47d14998aa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.1.1.13
+    second: {fileID: 2100000, guid: 6a8afbff3f5f5734fb4f95d425b39233, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.1.1.14
+    second: {fileID: 2100000, guid: 30c58bee6a6358545a30a0d8572f7c20, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.1.1.15
+    second: {fileID: 2100000, guid: a44dd5f83d19aeb4391798c593c41df6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.1.1.16
+    second: {fileID: 2100000, guid: a539d71f34b50934a8af5de0f90f3e0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.1.1.17
+    second: {fileID: 2100000, guid: 571591f4d409d114a9c3da666cb05c84, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.1.1.18
+    second: {fileID: 2100000, guid: 6e400741ec30d4c429b619898fbaa1d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.1.1.19
+    second: {fileID: 2100000, guid: 4eeaada1378dbb944b91e134a0c5ba3d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.1.1.2
+    second: {fileID: 2100000, guid: d081091d1b90a144aae41796e1e0f5a7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.1.1.20
+    second: {fileID: 2100000, guid: 8e5a4212f19eace4ca5b2a87130d0e0a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.1.1.21
+    second: {fileID: 2100000, guid: 97326ba3bab19824ba8a1367fc19ff07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.1.1.22
+    second: {fileID: 2100000, guid: 0ec2621bd54fc0742919b6efd0af710f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.1.1.23
+    second: {fileID: 2100000, guid: 0f7d7b632b0219248aa3564e778a4b86, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.1.1.24
+    second: {fileID: 2100000, guid: 007d5edf64f28a346a9b346443f3de5b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.1.1.25
+    second: {fileID: 2100000, guid: 6a8935b03566732478b7db050e5108d6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.1.1.26
+    second: {fileID: 2100000, guid: 707ff7848bbe876439ed58b38fc2a7b7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.1.1.27
+    second: {fileID: 2100000, guid: cb574ab3d61e82e429307aada87550f3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.1.1.28
+    second: {fileID: 2100000, guid: 13523bf22b1ac9b4b9205b6b461bb08b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.1.1.29
+    second: {fileID: 2100000, guid: eb4a40ad51b87eb49b20c1f6a2e95c8c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.1.1.3
+    second: {fileID: 2100000, guid: 818265eeb0f40be42a56f18c9b382568, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.1.1.4
+    second: {fileID: 2100000, guid: e613dc02154b8334da5785b646e88254, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.1.1.5
+    second: {fileID: 2100000, guid: 6ef68ad6283016e4799b8426f887dafd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.1.1.6
+    second: {fileID: 2100000, guid: 7b96db5febd427f4688dc0ca3ba2cada, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.1.1.7
+    second: {fileID: 2100000, guid: 65c759c30f114b14f89512d1d0224dd6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.1.1.8
+    second: {fileID: 2100000, guid: 2b335c84a703b6842b475fe5b2c07550, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.1.1.9
+    second: {fileID: 2100000, guid: 4d5d2d1fa911ceb4dac41fa286984cdf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.10
+    second: {fileID: 2100000, guid: e19487624fee795418f2655040e7137a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.11
+    second: {fileID: 2100000, guid: babcc46408f90ba4aaf0c740a8577c00, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.11.1
+    second: {fileID: 2100000, guid: a46c1ba358ec1a44480ba9249ed79f7c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.11.1.1
+    second: {fileID: 2100000, guid: e51922d727549f447aa341d779df6d16, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.11.1.10
+    second: {fileID: 2100000, guid: 1ef6821019d661e4dbaf6e28f402ad19, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.11.1.11
+    second: {fileID: 2100000, guid: f006c890c689dcc4098cdc2a88033952, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.11.1.12
+    second: {fileID: 2100000, guid: 7767e17ac5c7ec9448cdf13b1a8d8adc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.11.1.2
+    second: {fileID: 2100000, guid: f471fb3c60205024f9730a16947da7ba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.11.1.3
+    second: {fileID: 2100000, guid: 127b0c90a2b90644db75ea89286e6a4f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.11.1.4
+    second: {fileID: 2100000, guid: 9522070c10731434e8d185a02421de11, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.11.1.5
+    second: {fileID: 2100000, guid: 732558de19c5bd9439702cd337e30b52, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.11.1.6
+    second: {fileID: 2100000, guid: ae870c6777db73d49aba47987586ec0d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.11.1.7
+    second: {fileID: 2100000, guid: 3d019dd8304202244ab1662e1a2a3528, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.11.1.8
+    second: {fileID: 2100000, guid: df5551735ac4c194fbe66e960c0a5063, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.11.1.9
+    second: {fileID: 2100000, guid: f16754b0be9ec464883c4ef5863965d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.12
+    second: {fileID: 2100000, guid: acbbbc51853b31d4f81637cb6bfc2c92, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.13
+    second: {fileID: 2100000, guid: 38b326555bd676940a0a868a6c956875, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.14.1
+    second: {fileID: 2100000, guid: 18e5313ed8e8b064fb9f9572c8e0e6b1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.14.1.1
+    second: {fileID: 2100000, guid: 70aae48e95dc1f94e85c2e0252d60588, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.14.1.10
+    second: {fileID: 2100000, guid: da43dc3b6536ee94e958f71145223377, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.14.1.11
+    second: {fileID: 2100000, guid: 7d01b8d581ad4074ba213677384db253, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.14.1.12
+    second: {fileID: 2100000, guid: 279da863b4949584aa3275eb88b3e0e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.14.1.13
+    second: {fileID: 2100000, guid: 2d8a50654f275da4d8696d1601d15887, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.14.1.14
+    second: {fileID: 2100000, guid: e211e61e7d81a474686752baea94e644, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.14.1.15
+    second: {fileID: 2100000, guid: 639ccc4802ab8084f8137f6dbefe802d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.14.1.16
+    second: {fileID: 2100000, guid: 2302430b3fda0444c825e08571774429, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.14.1.2
+    second: {fileID: 2100000, guid: 7dedfd596991f9b4fa228175eb12c56d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.14.1.3
+    second: {fileID: 2100000, guid: 1dbd70afe2184e94eb11263e0da3d0af, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.14.1.4
+    second: {fileID: 2100000, guid: c4acaf536b862514a88a6f576931f1d8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.14.1.5
+    second: {fileID: 2100000, guid: 3b98dfa17674f894694ab1ac0866e7d9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.14.1.6
+    second: {fileID: 2100000, guid: c35eb76668c650d499e936d670faf305, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.14.1.7
+    second: {fileID: 2100000, guid: 1402930c5fd72494eb2551709061b0f9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.14.1.8
+    second: {fileID: 2100000, guid: f9b1cf006e38403419d417e63cdc3d3c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.14.1.9
+    second: {fileID: 2100000, guid: da0630249d2a0c742a6d8e764b63a78d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.2
+    second: {fileID: 2100000, guid: df0e0c5a71501374cba1f71516002f2b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.4
+    second: {fileID: 2100000, guid: 15e0c6242c9233b408bab289e53313ca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.5
+    second: {fileID: 2100000, guid: 18cd2229aa172aa438fecc31731c8031, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.6
+    second: {fileID: 2100000, guid: 441a96ccece717144be6580e3736ac85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.7
+    second: {fileID: 2100000, guid: 3aa0d3f08db810d4f8dfc6cdb5193ac7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.8
+    second: {fileID: 2100000, guid: 12ab1b7148346b84b97edc50c772cb22, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.9
+    second: {fileID: 2100000, guid: 4e63e563f2ec2d74d8827232d90aaa30, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: 473965957e3eada4cae274d8b29a4775, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

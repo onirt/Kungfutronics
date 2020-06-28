@@ -8,7 +8,7 @@ public class ParticleSeeker : MonoBehaviour
     public float force = 100.0f;
     public ParticleSystem _particleSystem;
     public int amount = 1;
-    public bool isBad = true;
+    public bool NotHealth = true;
 
     private void Start()
     {
@@ -45,10 +45,11 @@ public class ParticleSeeker : MonoBehaviour
     }
     private void OnParticleCollision(GameObject other)
     {
-        if (!isBad)
+        if (!NotHealth)
         {
             int count = _particleSystem.GetCollisionEvents(other,new List<ParticleCollisionEvent>());
-            GameManager.obj.playerHealth += count;
+            GamePlayManager.obj.playerHealth += amount;
+            GamePlayManager.obj.ui.UpdateHealthBar(GamePlayManager.obj.playerHealth);
         }
     }
 

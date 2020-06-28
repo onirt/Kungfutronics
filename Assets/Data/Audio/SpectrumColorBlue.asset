@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   samplePercentage: 1
   emphasisMultiplier: 200
-  scaleFactor: 7
+  scaleFactor: 1211
   maximunIntensity: 255
   retractionSpeed: 1
-  _r: 0
+  _r: 1
   _g: 0
   _b: 1
   materials:

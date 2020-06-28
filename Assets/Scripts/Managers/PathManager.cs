@@ -19,10 +19,10 @@ public class PathManager : MonoBehaviour
 
     private void Start()
     {
-        GameManager.obj.gameStarted += GameStarted;
+        GamePlayManager.obj.gameStarted += GameStarted;
     }
     private void OnDestroy() {
-        GameManager.obj.gameStarted -= GameStarted;
+        GamePlayManager.obj.gameStarted -= GameStarted;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -43,7 +43,7 @@ public class PathManager : MonoBehaviour
     }
     public void GameStarted (){
         
-        Transform player = GameManager.obj.player;
+        Transform player = GamePlayManager.obj.player;
         foreach (GameObject gate in gates)
         {
             gate.transform.position = new Vector3(gate.transform.position.x, player.position.y + 1.8f, gate.transform.position.z);

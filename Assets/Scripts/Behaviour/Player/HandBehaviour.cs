@@ -1,12 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class HandBehaviour : MonoBehaviour
 {
     [SerializeField]
-    private OVRInput.Controller m_controller = OVRInput.Controller.None;
+    public OVRInput.Controller m_controller = OVRInput.Controller.None;
 
+    public float touch;
 
     [SerializeField]
     Renderer meshRenderer;
@@ -23,17 +24,34 @@ public class HandBehaviour : MonoBehaviour
     Transform targeting;
     PowerBehaviour particlePower;
     //TrailRenderer trail;
-    
 
+    [SerializeField]
     int count;
     Vector3 lastPosition;
     int detectorIndex = 0;
-    public bool tracking; 
+    public bool tracking;
     bool isHit;
     int layerMask;
     float maxDistance = 300f;
     float size = 4f;
     RaycastHit hit;
+
+
+    public static byte TwoHand;
+
+    private void OnEnable()
+    {
+        VRGlyphInput.OnMatchResult += MatchGesture;
+    }
+    private void OnDisable()
+    {
+
+        VRGlyphInput.OnMatchResult -= MatchGesture;
+    }
+    public void MatchGesture(string result, float match, float ms)
+    {
+
+    }
     void Start()
     {
         powerRay.Stop();
@@ -49,7 +67,7 @@ public class HandBehaviour : MonoBehaviour
         //trail = GetComponent<TrailRenderer>();
         //trail.endColor = new Color(0,0,0,0);
         if (tracking)
-        StartCoroutine(PowerTest());
+            StartCoroutine(PowerTest());
     }
     IEnumerator PowerTest()
     {
@@ -78,7 +96,7 @@ public class HandBehaviour : MonoBehaviour
             if (hit.collider.tag == "Enemy")
             {
                 targeting.position = Vector3.Lerp(hit.collider.transform.position + Vector3.up * 2, targeting.position, Time.deltaTime);
-                targeting.LookAt(GameManager.obj.player.position);
+                targeting.LookAt(GamePlayManager.obj.player.position);
                 targeting.Rotate(0, 180, 0);
                 targeting.GetChild(0).gameObject.SetActive(true);
             }
@@ -99,39 +117,39 @@ public class HandBehaviour : MonoBehaviour
             return;
         }
 
-        float touch = OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, m_controller);
+        touch = OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, m_controller);
         //trail.enabled = touch > 0;
         if (touch == 0)
         {
             return;
         }
-        SendPower();
+        //SendPower();
         //trail.startColor = GetColor();
-       /* Vector3 deltaPosition = transform.position - lastPosition;
-        if (Vector3.Dot(GameManager.obj.player.forward, deltaPosition) < 0)
-        {
-            if (tracking)
-               GameManager.DebugApp("SYS", "magnitude detected: " + deltaPosition.magnitude + " amplifed: " + (deltaPosition.magnitude + 100000));
-            detectorIndex |= 1;
-            if (deltaPosition.magnitude > 0.07f)
-            {
-                detectorIndex |= 2;
-                if (tracking)
-                    GameManager.DebugApp("SYS", "Back detected");
-            }
-        }
-        else if (detectorIndex == 3)
-        {
-            if (deltaPosition.magnitude > 0.07f)
-            {
-                SendPower();
-            }
-        }
-        else
-        {
-            detectorIndex &= ~3;
-        }
-        lastPosition = transform.position;*/
+        /* Vector3 deltaPosition = transform.position - lastPosition;
+         if (Vector3.Dot(GameManager.obj.player.forward, deltaPosition) < 0)
+         {
+             if (tracking)
+                GameManager.DebugApp("SYS", "magnitude detected: " + deltaPosition.magnitude + " amplifed: " + (deltaPosition.magnitude + 100000));
+             detectorIndex |= 1;
+             if (deltaPosition.magnitude > 0.07f)
+             {
+                 detectorIndex |= 2;
+                 if (tracking)
+                     GameManager.DebugApp("SYS", "Back detected");
+             }
+         }
+         else if (detectorIndex == 3)
+         {
+             if (deltaPosition.magnitude > 0.07f)
+             {
+                 SendPower();
+             }
+         }
+         else
+         {
+             detectorIndex &= ~3;
+         }
+         lastPosition = transform.position;*/
     }
     /*private void OnDrawGizmos()
     {
@@ -156,13 +174,25 @@ public class HandBehaviour : MonoBehaviour
             audioSouce.Play();
             StartParticles();
             SetCount();
-            GameManager.obj.SetPoints(100);
+            GamePlayManager.obj.SetPoints(100);
             Destroy(other.gameObject);
         }
         else if (other.tag == "Virus")
         {
-            audioSouce.clip = other.GetComponent<SparkBehaviour>().sparkModel.sound;
+
+            SparkBehaviour sparkBehaviour = other.GetComponent<SparkBehaviour>();
+            if (sparkBehaviour != null)
+            {
+                audioSouce.clip = sparkBehaviour.sparkModel.sound;
+            }
+            else
+            {
+                BH_Virus bh = other.GetComponent<BH_Virus>();
+                if (bh == null) return;
+                audioSouce.clip = bh.virus.sound;
+            }
             audioSouce.Play();
+
             Destroy(other.gameObject);
         }
     }
@@ -172,17 +202,17 @@ public class HandBehaviour : MonoBehaviour
         //bool isHit = Physics.Raycast(transform.position, transform.forward, out hit, maxDistance, layerMask);
         //if (isHit)
         //{
-            //if (hit.collider.tag == "Enemy"){
-                //StartCoroutine(hit.transform.GetComponent<EnemyBehaviour>().SetDamageWithDelay(count));
-            //}
+        //if (hit.collider.tag == "Enemy"){
+        //StartCoroutine(hit.transform.GetComponent<EnemyBehaviour>().SetDamageWithDelay(count));
+        //}
 
-            powerRay.trigger.SetCollider(0, hit.transform);
-            //Transform power = GameManager.obj.playerModel.InstantiatePowerPrefab(transform.position + transform.forward * 0.5f, transform.forward, count);
+        powerRay.trigger.SetCollider(0, hit.transform);
+        //Transform power = GameManager.obj.playerModel.InstantiatePowerPrefab(transform.position + transform.forward * 0.5f, transform.forward, count);
         particlePower.power = count;
-            //particleSeeker.target = power;
-            particleSeeker.enabled = true;
+        //particleSeeker.target = power;
+        particleSeeker.enabled = true;
 
-            powerRay.Emit(count);
+        powerRay.Emit(1);
         Debug.Log("Emit: " + count);
         //}
 
@@ -197,7 +227,7 @@ public class HandBehaviour : MonoBehaviour
 
         FinishParticles();
         particleSeeker.enabled = false;
-        powerRay.trigger.SetCollider(0,null);
+        powerRay.trigger.SetCollider(0, null);
     }
     private void StartParticles()
     {
@@ -276,6 +306,6 @@ public class HandBehaviour : MonoBehaviour
     }
     private void TakeDamage(int amount)
     {
-        GameManager.obj.Damage(amount, GameManager.obj.playerModel.overload);
+        GamePlayManager.obj.Damage(amount, GamePlayManager.obj.playerModel.overload);
     }
 }

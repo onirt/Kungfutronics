@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class CalibratorManager : MonoBehaviour
+public class CalibratorManager : GameManager
 {
     [SerializeField]
     private Text debug;
@@ -18,7 +19,11 @@ public class CalibratorManager : MonoBehaviour
     [SerializeField]
     private Transform calibrateRightRef;
 
-
+    void Awake()
+    {
+        if (_obj == null)
+            SetSingleton(this);
+    }
     void Start()
     {
         Vector3 leftHandMax = new Vector3(PlayerPrefs.GetFloat("LeftHandX"), PlayerPrefs.GetFloat("LeftHandY"), PlayerPrefs.GetFloat("LeftHandZ"));
@@ -30,7 +35,7 @@ public class CalibratorManager : MonoBehaviour
     void Update()
     {
 
-        float touch = OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, m_controller);
+        /*float touch = OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, m_controller);
         debug.text = "Touch: " + touch + ", " + calibrateLeftRef.position + ", " + calibrateRightRef.position;
         if (touch == 0)
         {
@@ -43,6 +48,19 @@ public class CalibratorManager : MonoBehaviour
         PlayerPrefs.SetFloat("RightHandY", rightHand.position.y);
         PlayerPrefs.SetFloat("RightHandZ", rightHand.position.z);
         calibrateLeftRef.position = leftHand.position;
-        calibrateRightRef.position = rightHand.position;
+        calibrateRightRef.position = rightHand.position;*/
+    }
+    public void ExitScene()
+    {
+        SceneManager.LoadScene("Main");
+    }
+
+    public override void SetPoints(int newpoints)
+    {
+    }
+
+    public override void SetMessage(string message)
+    {
+        debug.text += message +  "\n";
     }
 }

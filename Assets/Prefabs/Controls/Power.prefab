@@ -60,7 +60,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 50
   power: 0
-  isReference: 1
 --- !u!1001 &4941191828031364814
 PrefabInstance:
   m_ObjectHideFlags: 0

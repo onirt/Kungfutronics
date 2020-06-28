@@ -1,0 +1,567 @@
+fileFormatVersion: 2
+guid: ddefcb9e54e89db44940200f3b8cf044
+ModelImporter:
+  serializedVersion: 19300
+  internalIDToNameTable:
+  - first:
+      74: 653450363894660093
+    second: IK Chain008|Box001|Take 001|BaseLayer
+  - first:
+      74: -1680147599655500387
+    second: IK Chain008|Circle001|Take 001|BaseLayer
+  - first:
+      74: -3396380930116793240
+    second: IK Chain008|Circle003|Take 001|BaseLayer
+  - first:
+      74: 7707090102144836887
+    second: IK Chain008|Circle004|Take 001|BaseLayer
+  - first:
+      74: 7110379904115913988
+    second: IK Chain008|Circle005|Take 001|BaseLayer
+  - first:
+      74: -6213793725808894327
+    second: IK Chain008|IK Chain007|Take 001|BaseLayer
+  - first:
+      74: -206738416683901597
+    second: IK Chain008|IK Chain008|Take 001|BaseLayer
+  - first:
+      74: -3943829134600241116
+    second: IK Chain008|IK Chain009|Take 001|BaseLayer
+  - first:
+      74: -7819145390291138096
+    second: IK Chain008|IK Chain012|Take 001|BaseLayer
+  - first:
+      74: 5415859247000930474
+    second: IK Chain008|IK Chain013|Take 001|BaseLayer
+  - first:
+      74: -3117991457104448195
+    second: IK Chain008|IK Chain014|Take 001|BaseLayer
+  - first:
+      74: 4546605841372914906
+    second: IK Chain008|IK Chain015|Take 001|BaseLayer
+  - first:
+      74: 1028735395678325574
+    second: IK Chain009|Box001|Take 001|BaseLayer
+  - first:
+      74: 4255625831759917113
+    second: IK Chain009|Circle001|Take 001|BaseLayer
+  - first:
+      74: 4120640705043607279
+    second: IK Chain009|Circle003|Take 001|BaseLayer
+  - first:
+      74: -1112329603660123755
+    second: IK Chain009|Circle004|Take 001|BaseLayer
+  - first:
+      74: -5215912025757632196
+    second: IK Chain009|Circle005|Take 001|BaseLayer
+  - first:
+      74: 779525420474837772
+    second: IK Chain009|IK Chain007|Take 001|BaseLayer
+  - first:
+      74: 5103591850955706194
+    second: IK Chain009|IK Chain008|Take 001|BaseLayer
+  - first:
+      74: -2327178402131242469
+    second: IK Chain009|IK Chain009|Take 001|BaseLayer
+  - first:
+      74: 6126365734712351187
+    second: IK Chain009|IK Chain012|Take 001|BaseLayer
+  - first:
+      74: -7219256592099994200
+    second: IK Chain009|IK Chain013|Take 001|BaseLayer
+  - first:
+      74: -3453153164917305228
+    second: IK Chain009|IK Chain014|Take 001|BaseLayer
+  - first:
+      74: -1853111166814442801
+    second: IK Chain009|IK Chain015|Take 001|BaseLayer
+  - first:
+      74: 1792572976061316347
+    second: IK Chain012|Box001|Take 001|BaseLayer
+  - first:
+      74: -1528600666009737004
+    second: IK Chain012|Circle001|Take 001|BaseLayer
+  - first:
+      74: 618558658365883548
+    second: IK Chain012|Circle003|Take 001|BaseLayer
+  - first:
+      74: -4203766086879957691
+    second: IK Chain012|Circle004|Take 001|BaseLayer
+  - first:
+      74: -2939778049348433023
+    second: IK Chain012|Circle005|Take 001|BaseLayer
+  - first:
+      74: 4869946669179196261
+    second: IK Chain012|IK Chain007|Take 001|BaseLayer
+  - first:
+      74: 8753058903529734330
+    second: IK Chain012|IK Chain008|Take 001|BaseLayer
+  - first:
+      74: 2280315711759775205
+    second: IK Chain012|IK Chain009|Take 001|BaseLayer
+  - first:
+      74: -592922916767829517
+    second: IK Chain012|IK Chain012|Take 001|BaseLayer
+  - first:
+      74: 8800318039786645432
+    second: IK Chain012|IK Chain013|Take 001|BaseLayer
+  - first:
+      74: -3827180791319634937
+    second: IK Chain012|IK Chain014|Take 001|BaseLayer
+  - first:
+      74: 7983489027111159897
+    second: IK Chain012|IK Chain015|Take 001|BaseLayer
+  - first:
+      74: 5927107029770399537
+    second: IK Chain007|Box001|Take 001|BaseLayer
+  - first:
+      74: -3653006547395843377
+    second: IK Chain007|Circle001|Take 001|BaseLayer
+  - first:
+      74: 4284175179373668704
+    second: IK Chain007|Circle003|Take 001|BaseLayer
+  - first:
+      74: 2951217041584709377
+    second: IK Chain007|Circle004|Take 001|BaseLayer
+  - first:
+      74: -1487766364106088967
+    second: IK Chain007|Circle005|Take 001|BaseLayer
+  - first:
+      74: -8186818826238067769
+    second: IK Chain007|IK Chain007|Take 001|BaseLayer
+  - first:
+      74: 2242883252851831925
+    second: IK Chain007|IK Chain008|Take 001|BaseLayer
+  - first:
+      74: -1420520067517728983
+    second: IK Chain007|IK Chain009|Take 001|BaseLayer
+  - first:
+      74: -3521801691688194255
+    second: IK Chain007|IK Chain012|Take 001|BaseLayer
+  - first:
+      74: 1844729734632094726
+    second: IK Chain007|IK Chain013|Take 001|BaseLayer
+  - first:
+      74: -7220279013066045403
+    second: IK Chain007|IK Chain014|Take 001|BaseLayer
+  - first:
+      74: 7334755742279680540
+    second: IK Chain007|IK Chain015|Take 001|BaseLayer
+  - first:
+      74: -6017028659801825827
+    second: Circle003|Box001|Take 001|BaseLayer
+  - first:
+      74: 3495824294444834359
+    second: Circle003|Circle001|Take 001|BaseLayer
+  - first:
+      74: 8665020566084678513
+    second: Circle003|Circle003|Take 001|BaseLayer
+  - first:
+      74: 35694741045847463
+    second: Circle003|Circle004|Take 001|BaseLayer
+  - first:
+      74: -3138734097619949525
+    second: Circle003|Circle005|Take 001|BaseLayer
+  - first:
+      74: -8185156427829750395
+    second: Circle003|IK Chain007|Take 001|BaseLayer
+  - first:
+      74: -109649446640057350
+    second: Circle003|IK Chain008|Take 001|BaseLayer
+  - first:
+      74: 7856573362960362963
+    second: Circle003|IK Chain009|Take 001|BaseLayer
+  - first:
+      74: 3151642199221237430
+    second: Circle003|IK Chain012|Take 001|BaseLayer
+  - first:
+      74: -7525571950280016688
+    second: Circle003|IK Chain013|Take 001|BaseLayer
+  - first:
+      74: -2754590158012871961
+    second: Circle003|IK Chain014|Take 001|BaseLayer
+  - first:
+      74: -354363772272281419
+    second: Circle003|IK Chain015|Take 001|BaseLayer
+  - first:
+      74: 5862543501114407046
+    second: Armature|Armature|Take 001|BaseLayer
+  - first:
+      74: 249061393844541562
+    second: Armature|Box001|Take 001|BaseLayer
+  - first:
+      74: 152000855622332937
+    second: Armature|Circle001|Take 001|BaseLayer
+  - first:
+      74: 5282851948896303170
+    second: Armature|Circle003|Take 001|BaseLayer
+  - first:
+      74: -7710242206741163260
+    second: Armature|Circle004|Take 001|BaseLayer
+  - first:
+      74: -7265477461674350055
+    second: Armature|Circle005|Take 001|BaseLayer
+  - first:
+      74: -835160036800301243
+    second: Armature|IK Chain007|Take 001|BaseLayer
+  - first:
+      74: -196405692798371666
+    second: Armature|IK Chain008|Take 001|BaseLayer
+  - first:
+      74: 8295891463098265704
+    second: Armature|IK Chain009|Take 001|BaseLayer
+  - first:
+      74: 8047305414631574261
+    second: Armature|IK Chain012|Take 001|BaseLayer
+  - first:
+      74: -1439521024647528700
+    second: Armature|IK Chain013|Take 001|BaseLayer
+  - first:
+      74: 4261088210024263164
+    second: Armature|IK Chain014|Take 001|BaseLayer
+  - first:
+      74: -5041746532629099367
+    second: Armature|IK Chain015|Take 001|BaseLayer
+  - first:
+      74: 1217936348192773068
+    second: Circle005|Box001|Take 001|BaseLayer
+  - first:
+      74: 4965110606381554486
+    second: Circle005|Circle001|Take 001|BaseLayer
+  - first:
+      74: 2462925438630279922
+    second: Circle005|Circle003|Take 001|BaseLayer
+  - first:
+      74: -8588910123938516969
+    second: Circle005|Circle004|Take 001|BaseLayer
+  - first:
+      74: -1676157547580456404
+    second: Circle005|Circle005|Take 001|BaseLayer
+  - first:
+      74: -9028351173374494676
+    second: Circle005|IK Chain007|Take 001|BaseLayer
+  - first:
+      74: -6465148366517038512
+    second: Circle005|IK Chain008|Take 001|BaseLayer
+  - first:
+      74: -7828472817224582363
+    second: Circle005|IK Chain009|Take 001|BaseLayer
+  - first:
+      74: -406460478447764244
+    second: Circle005|IK Chain012|Take 001|BaseLayer
+  - first:
+      74: -6654964689037836992
+    second: Circle005|IK Chain013|Take 001|BaseLayer
+  - first:
+      74: 9182591034730605362
+    second: Circle005|IK Chain014|Take 001|BaseLayer
+  - first:
+      74: -187241502977666975
+    second: Circle005|IK Chain015|Take 001|BaseLayer
+  - first:
+      74: -5263832297943698196
+    second: Circle004|Box001|Take 001|BaseLayer
+  - first:
+      74: 177567216402276379
+    second: Circle004|Circle001|Take 001|BaseLayer
+  - first:
+      74: 6120374585000985327
+    second: Circle004|Circle003|Take 001|BaseLayer
+  - first:
+      74: -369783395051017674
+    second: Circle004|Circle004|Take 001|BaseLayer
+  - first:
+      74: 6841794744764451987
+    second: Circle004|Circle005|Take 001|BaseLayer
+  - first:
+      74: 4866251362548975578
+    second: Circle004|IK Chain007|Take 001|BaseLayer
+  - first:
+      74: 5060846771392550243
+    second: Circle004|IK Chain008|Take 001|BaseLayer
+  - first:
+      74: -4248350393172290841
+    second: Circle004|IK Chain009|Take 001|BaseLayer
+  - first:
+      74: 6979521884417006484
+    second: Circle004|IK Chain012|Take 001|BaseLayer
+  - first:
+      74: 4770600941412103186
+    second: Circle004|IK Chain013|Take 001|BaseLayer
+  - first:
+      74: -4892882499870430236
+    second: Circle004|IK Chain014|Take 001|BaseLayer
+  - first:
+      74: -664206717781991789
+    second: Circle004|IK Chain015|Take 001|BaseLayer
+  - first:
+      74: -4128270416682764779
+    second: Circle001|Box001|Take 001|BaseLayer
+  - first:
+      74: -163559602577511166
+    second: Circle001|Circle001|Take 001|BaseLayer
+  - first:
+      74: -3944162082919167545
+    second: Circle001|Circle003|Take 001|BaseLayer
+  - first:
+      74: -4447383999418000884
+    second: Circle001|Circle004|Take 001|BaseLayer
+  - first:
+      74: -7001909594212343993
+    second: Circle001|Circle005|Take 001|BaseLayer
+  - first:
+      74: -1336135707495386667
+    second: Circle001|IK Chain007|Take 001|BaseLayer
+  - first:
+      74: -6743931105436888571
+    second: Circle001|IK Chain008|Take 001|BaseLayer
+  - first:
+      74: -3379632241962766943
+    second: Circle001|IK Chain009|Take 001|BaseLayer
+  - first:
+      74: 3708256198727033279
+    second: Circle001|IK Chain012|Take 001|BaseLayer
+  - first:
+      74: -407241458026906499
+    second: Circle001|IK Chain013|Take 001|BaseLayer
+  - first:
+      74: 4538119106262414948
+    second: Circle001|IK Chain014|Take 001|BaseLayer
+  - first:
+      74: -3756739008889121275
+    second: Circle001|IK Chain015|Take 001|BaseLayer
+  - first:
+      74: -298526358597998468
+    second: IK Chain015|Box001|Take 001|BaseLayer
+  - first:
+      74: 7311323091929218453
+    second: IK Chain015|Circle001|Take 001|BaseLayer
+  - first:
+      74: -6259237775298582918
+    second: IK Chain015|Circle003|Take 001|BaseLayer
+  - first:
+      74: -5706215895219878648
+    second: IK Chain015|Circle004|Take 001|BaseLayer
+  - first:
+      74: 5036548585211434552
+    second: IK Chain015|Circle005|Take 001|BaseLayer
+  - first:
+      74: -5246221233587907558
+    second: IK Chain015|IK Chain007|Take 001|BaseLayer
+  - first:
+      74: -6810266736796336921
+    second: IK Chain015|IK Chain008|Take 001|BaseLayer
+  - first:
+      74: -8375633909299615355
+    second: IK Chain015|IK Chain009|Take 001|BaseLayer
+  - first:
+      74: 8030172653957663011
+    second: IK Chain015|IK Chain012|Take 001|BaseLayer
+  - first:
+      74: -5266246150786140457
+    second: IK Chain015|IK Chain013|Take 001|BaseLayer
+  - first:
+      74: 7939208583627405273
+    second: IK Chain015|IK Chain014|Take 001|BaseLayer
+  - first:
+      74: -8135822716428320061
+    second: IK Chain015|IK Chain015|Take 001|BaseLayer
+  - first:
+      74: -3179912867540265186
+    second: IK Chain013|Box001|Take 001|BaseLayer
+  - first:
+      74: -5907570117920194313
+    second: IK Chain013|Circle001|Take 001|BaseLayer
+  - first:
+      74: 8862018430197717011
+    second: IK Chain013|Circle003|Take 001|BaseLayer
+  - first:
+      74: 8365504930261941012
+    second: IK Chain013|Circle004|Take 001|BaseLayer
+  - first:
+      74: 582791011279517884
+    second: IK Chain013|Circle005|Take 001|BaseLayer
+  - first:
+      74: -3179407808142764236
+    second: IK Chain013|IK Chain007|Take 001|BaseLayer
+  - first:
+      74: 3799943293230455344
+    second: IK Chain013|IK Chain008|Take 001|BaseLayer
+  - first:
+      74: 6735077609422445187
+    second: IK Chain013|IK Chain009|Take 001|BaseLayer
+  - first:
+      74: 3135282140799815686
+    second: IK Chain013|IK Chain012|Take 001|BaseLayer
+  - first:
+      74: -3041984552592606455
+    second: IK Chain013|IK Chain013|Take 001|BaseLayer
+  - first:
+      74: 8588495298857748449
+    second: IK Chain013|IK Chain014|Take 001|BaseLayer
+  - first:
+      74: 2404765154684333649
+    second: IK Chain013|IK Chain015|Take 001|BaseLayer
+  - first:
+      74: -3066861522728302768
+    second: IK Chain014|Box001|Take 001|BaseLayer
+  - first:
+      74: 2816476011406559502
+    second: IK Chain014|Circle001|Take 001|BaseLayer
+  - first:
+      74: -5442512461509909540
+    second: IK Chain014|Circle003|Take 001|BaseLayer
+  - first:
+      74: -5926492273707104866
+    second: IK Chain014|Circle004|Take 001|BaseLayer
+  - first:
+      74: -2665658035883267788
+    second: IK Chain014|Circle005|Take 001|BaseLayer
+  - first:
+      74: 1029652755366920868
+    second: IK Chain014|IK Chain007|Take 001|BaseLayer
+  - first:
+      74: -7267253672152569658
+    second: IK Chain014|IK Chain008|Take 001|BaseLayer
+  - first:
+      74: 8065082232789399877
+    second: IK Chain014|IK Chain009|Take 001|BaseLayer
+  - first:
+      74: 1779222139232577519
+    second: IK Chain014|IK Chain012|Take 001|BaseLayer
+  - first:
+      74: 9064458571546804097
+    second: IK Chain014|IK Chain013|Take 001|BaseLayer
+  - first:
+      74: 3973339379751899512
+    second: IK Chain014|IK Chain014|Take 001|BaseLayer
+  - first:
+      74: 4900778271682027892
+    second: IK Chain014|IK Chain015|Take 001|BaseLayer
+  - first:
+      74: -8833108483329337075
+    second: Box001|Box001|Take 001|BaseLayer
+  - first:
+      74: -9210838790690972486
+    second: Box001|Circle001|Take 001|BaseLayer
+  - first:
+      74: 7468563208688382919
+    second: Box001|Circle003|Take 001|BaseLayer
+  - first:
+      74: -1663042872770637771
+    second: Box001|Circle004|Take 001|BaseLayer
+  - first:
+      74: -3652918057169792560
+    second: Box001|Circle005|Take 001|BaseLayer
+  - first:
+      74: 653644785393564605
+    second: Box001|IK Chain007|Take 001|BaseLayer
+  - first:
+      74: 6054493123464111607
+    second: Box001|IK Chain008|Take 001|BaseLayer
+  - first:
+      74: -165655257113607335
+    second: Box001|IK Chain009|Take 001|BaseLayer
+  - first:
+      74: -5741338154475197442
+    second: Box001|IK Chain012|Take 001|BaseLayer
+  - first:
+      74: -2053255529283946383
+    second: Box001|IK Chain013|Take 001|BaseLayer
+  - first:
+      74: -7352211407295915843
+    second: Box001|IK Chain014|Take 001|BaseLayer
+  - first:
+      74: -7603142469494790501
+    second: Box001|IK Chain015|Take 001|BaseLayer
+  externalObjects: {}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

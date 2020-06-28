@@ -20,7 +20,7 @@ public class FinishBehaviour : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (GameManager.obj.points > 0)
+        if (GamePlayManager.obj.points > 0)
             audioSource.Play();
         finished = true;;
     }

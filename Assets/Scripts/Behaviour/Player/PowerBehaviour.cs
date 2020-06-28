@@ -16,9 +16,9 @@ public class PowerBehaviour : MonoBehaviour
 
         collisionEvents = new List<ParticleCollisionEvent>();
         var velocityOverLifetime = ps.velocityOverLifetime;
-        velocityOverLifetime.xMultiplier += (GameManager.obj.level - 1) * 5;
-        velocityOverLifetime.yMultiplier += (GameManager.obj.level - 1) * 5;
-        velocityOverLifetime.zMultiplier += (GameManager.obj.level - 1) * 5;
+        velocityOverLifetime.xMultiplier += (GameManager._obj.level - 1) * 5;
+        velocityOverLifetime.yMultiplier += (GameManager._obj.level - 1) * 5;
+        velocityOverLifetime.zMultiplier += (GameManager._obj.level - 1) * 5;
     }
 
     void Update()
@@ -35,7 +35,7 @@ public class PowerBehaviour : MonoBehaviour
         }
         else
         {
-            GameManager.obj.SetPoints(ps.GetCollisionEvents(other, collisionEvents));
+            GamePlayManager.obj.SetPoints(ps.GetCollisionEvents(other, collisionEvents));
             power++;
 
         }

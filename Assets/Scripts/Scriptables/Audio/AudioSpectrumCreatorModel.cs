@@ -25,16 +25,16 @@ public class AudioSpectrumCreatorModel : AudioSpectrumModel
     {
         intensities = new float[sparkDataModel.models.Length];
         deltaAngle = 360f / intensities.Length;
-        musicSync = PlayerPrefs.GetInt(GameManager.GetLevelTag("MusicSyc"), 1) == 1;
-        radius = PlayerPrefs.GetFloat(GameManager.GetLevelTag("Offset"), 0.05f);
+        musicSync = PlayerPrefs.GetInt(GamePlayManager.GetLevelTag("MusicSyc"), 1) == 1;
+        radius = PlayerPrefs.GetFloat(GamePlayManager.GetLevelTag("Offset"), 0.05f);
         if (!musicSync)
         {
-            instantiateDelay = PlayerPrefs.GetFloat(GameManager.GetLevelTag("Delay"), 0.5f);
+            instantiateDelay = PlayerPrefs.GetFloat(GamePlayManager.GetLevelTag("Delay"), 0.5f);
             deepPosition = 20f;
         }
         else
         {
-            instantiateDelay = PlayerPrefs.GetFloat(GameManager.GetLevelTag("Delay"), 0.2f);
+            instantiateDelay = PlayerPrefs.GetFloat(GamePlayManager.GetLevelTag("Delay"), 0.2f);
             deepPosition = 10f;
         }
         sparkDataModel.InitData();
@@ -42,8 +42,8 @@ public class AudioSpectrumCreatorModel : AudioSpectrumModel
         {
             data.Init();
         }
-        height = GameManager.obj.player.position.y - 0.1f;
-        Debug.Log(GameManager.GetLevelTag("Offset") + ".radius: " +  radius);
+        height = GamePlayManager.obj.player.position.y - 0.1f;
+        Debug.Log(GamePlayManager.GetLevelTag("Offset") + ".radius: " +  radius);
     }
 
     protected override int GetLength()
@@ -63,7 +63,7 @@ public class AudioSpectrumCreatorModel : AudioSpectrumModel
             }
             for (int i = intensities.Length - 1; i >= 0; i--)
             {
-                if (GameManager.obj.test && i < dataFrequencyHelpers.Length)
+                if (GamePlayManager.obj.test && i < dataFrequencyHelpers.Length)
                      dataFrequencyHelpers[i].Process(intensities[i]);
                 if (intensities[i] > sparkDataModel.models[i].life)
                 {

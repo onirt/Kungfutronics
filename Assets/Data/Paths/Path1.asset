@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88f2f9f6962251b48a086ce79b47c0b2, type: 3}
   m_Name: Path1
   m_EditorClassIdentifier: 
+  update: 0
   points:
   - {x: 2.3, y: 0.5, z: 55.8}
   - {x: 2.3, y: 0.5, z: 37.58}

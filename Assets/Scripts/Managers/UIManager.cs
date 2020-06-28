@@ -63,14 +63,16 @@ public class UIManager : MonoBehaviour
     GameObject LevelsPanel;
     [SerializeField]
     Toggle MusicSync;
+    [SerializeField]
+    Slider playerHealthBar;
 
 
 
     private float pointsTimer = 3;
     private void Start()
     {
-        GameManager.obj.gameEnded += GameEnded;
-        GameManager.obj.gameStarted += GameStarted;
+        GamePlayManager.obj.gameEnded += GameEnded;
+        GamePlayManager.obj.gameStarted += GameStarted;
 
         /*slider.value = PlayerPrefs.GetFloat(GameManager.GetLevelTag("speed"));
         text.text = "VAsL: " + slider.value;
@@ -93,12 +95,12 @@ public class UIManager : MonoBehaviour
     }
     private void OnDestroy()
     {
-        GameManager.obj.gameEnded -= GameEnded;
-        GameManager.obj.gameStarted -= GameStarted;
+        GamePlayManager.obj.gameEnded -= GameEnded;
+        GamePlayManager.obj.gameStarted -= GameStarted;
     }
     private void Update()
     {
-        if (GameManager.obj.gameStatus != GameManager.GameStatus.Started) return;
+        if (GamePlayManager.obj.gameStatus != GamePlayManager.GameStatus.Started) return;
 
 
         if (pointsTimer < 3)
@@ -163,6 +165,10 @@ public class UIManager : MonoBehaviour
         PlayerPrefs.SetFloat(GameManager.GetLevelTag("delay"), slider2.value);
         text2.text = "VAL: " + slider2.value;
     }*/
+    public void UpdateHealthBar(float playerHealth)
+    {
+        playerHealthBar.value = playerHealth;
+    }
     public void UpdateTimer(int timer)
     {
         int sec = timer % 60;
@@ -191,7 +197,7 @@ public class UIManager : MonoBehaviour
     }
     public void GameStarted()
     {
-        if (!GameManager.obj.isDebug)
+        if (!GamePlayManager.obj.isDebug)
         debug.gameObject.SetActive(false);
         Timer.enabled = true;
         //TimeSelection.gameObject.SetActive(false);
@@ -240,23 +246,23 @@ public class UIManager : MonoBehaviour
         lockValues = true;
         string food_name = model.type.ToString();
 
-        Threshold.value = PlayerPrefs.GetFloat(GameManager.GetLevelTag(food_name + "_Th"));
+        Threshold.value = PlayerPrefs.GetFloat(GamePlayManager.GetLevelTag(food_name + "_Th"));
         ThresholdText.text = Threshold.value + "";
 
-        Scale.value = PlayerPrefs.GetFloat(GameManager.GetLevelTag(food_name));
+        Scale.value = PlayerPrefs.GetFloat(GamePlayManager.GetLevelTag(food_name));
         ScaleText.text = Scale.value + "";
 
-        Delay.value = PlayerPrefs.GetFloat(GameManager.GetLevelTag("Delay"));
+        Delay.value = PlayerPrefs.GetFloat(GamePlayManager.GetLevelTag("Delay"));
         DelayText.text = "" + Delay.value;
 
-        Offset.value = PlayerPrefs.GetFloat(GameManager.GetLevelTag("Offset"));
+        Offset.value = PlayerPrefs.GetFloat(GamePlayManager.GetLevelTag("Offset"));
         OffsetText.text = "" + Offset.value;
 
-        MusicSync.isOn = PlayerPrefs.GetInt(GameManager.GetLevelTag("MusicSyc")) == 1;
+        MusicSync.isOn = PlayerPrefs.GetInt(GamePlayManager.GetLevelTag("MusicSyc")) == 1;
         RefreshMusicOnUI();
 
         ModelSelectedText.text = food_name;
-        generalText.text = "Configuracion General Nivel: " + GameManager.obj.level;
+        generalText.text = "Configuracion General Nivel: " + GamePlayManager.obj.level;
 
         Invoke("Unlock", 1);
     }
@@ -266,7 +272,7 @@ public class UIManager : MonoBehaviour
     }
     public void SetLevel(int level)
     {
-        GameManager.obj.level = level;
+        GamePlayManager.obj.level = level;
     }
     /*public void SetFoodSelection()
     {
@@ -318,12 +324,12 @@ public class UIManager : MonoBehaviour
         Delay.gameObject.SetActive(MusicSync.isOn);
         if (MusicSync.isOn)
         {
-            Delay.value = PlayerPrefs.GetFloat(GameManager.GetLevelTag("Delay"), 0.2f);
+            Delay.value = PlayerPrefs.GetFloat(GamePlayManager.GetLevelTag("Delay"), 0.2f);
             DelayText.text = "" + Delay.value;
         }
         else
         {
-            float spawnTime = PlayerPrefs.GetFloat(GameManager.GetLevelTag("Delay"), 1.0f);
+            float spawnTime = PlayerPrefs.GetFloat(GamePlayManager.GetLevelTag("Delay"), 1.0f);
             SpawnTimeSelection.value = spawnTime <= 1.0f ? 0 : (spawnTime <= 2.0f ? 1 : (spawnTime <= 5.0f ? 2 : 3));
         }
     }

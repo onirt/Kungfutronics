@@ -10,13 +10,13 @@ public class SparkBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameManager.obj.gameEnded += DestroyObject;
+        GamePlayManager.obj.gameEnded += DestroyObject;
         pathBehaviour = GetComponent<PathBehaviour>();
         pathBehaviour.reached += AddSparkForce;
     }
     private void OnDestroy()
     {
-        GameManager.obj.gameEnded -= DestroyObject;
+        GamePlayManager.obj.gameEnded -= DestroyObject;
         pathBehaviour.reached -= AddSparkForce;
     }
     public void AddSparkForce()

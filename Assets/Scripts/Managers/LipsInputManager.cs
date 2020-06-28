@@ -52,7 +52,7 @@ public class LipsInputManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.obj.gameStatus != GameManager.GameStatus.Started) return;
+        if (GamePlayManager.obj.gameStatus != GamePlayManager.GameStatus.Started) return;
         if ((lipsyncContext != null))
         {
             // get the current viseme frame
@@ -95,7 +95,7 @@ public class LipsInputManager : MonoBehaviour
         {
             if (EatOn)
             {
-                GameManager.obj.SetPoints(other.gameObject.GetComponent<SparkBehaviour>().sparkModel.points);
+                GamePlayManager.obj.SetPoints(other.gameObject.GetComponent<SparkBehaviour>().sparkModel.points);
                 Destroy(other.gameObject);
                 m_particleSystem.Play();
             }

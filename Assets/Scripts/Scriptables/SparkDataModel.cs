@@ -15,8 +15,8 @@ public class SparkDataModel : ScriptableObject
         {
             SparkModel spark = models[i];
             string tag = spark.type.ToString();
-            spark.scale = PlayerPrefs.GetFloat(GameManager.GetLevelTag(tag));
-            spark.life = PlayerPrefs.GetFloat(GameManager.GetLevelTag(tag + "_Th"));
+            spark.scale = PlayerPrefs.GetFloat(GamePlayManager.GetLevelTag(tag));
+            spark.life = PlayerPrefs.GetFloat(GamePlayManager.GetLevelTag(tag + "_Th"));
         }
     }
     public void InstantiatModel(int selectedModel)
