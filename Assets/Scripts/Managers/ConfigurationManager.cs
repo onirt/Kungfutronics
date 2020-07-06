@@ -105,6 +105,7 @@ public class ConfigurationManager : MonoBehaviour
     }
     public void ExitGame()
     {
+        Debug.Log("Exiting application");
         Application.Quit();
     }
     /*

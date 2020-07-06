@@ -4,29 +4,30 @@ using UnityEngine;
 
 public class PowerUp : MonoBehaviour
 {
-    MeshRenderer render;
+    //MeshRenderer render;
     ParticleSystem ps;
     private void Start()
     {
-        render = GetComponent<MeshRenderer>();
+        //render = GetComponent<MeshRenderer>();
+        //render.material.color = Color.white;
+        //render.material.SetColor("_EmissionColor", Color.white);
         ps = GetComponent<ParticleSystem>();
     }
-    private void Update()
+    /*private void Update()
     {
         Transform player = GamePlayManager.obj.player;
         transform.LookAt(new Vector3(player.position.x,transform.position.y,player.position.z));
-    }
+    }*/
     private void OnParticleCollision(GameObject other)
     {
-        render.material.color = Color.green;
-        render.material.SetColor("_EmissionColor", Color.green);
+        //render.material.color = Color.green;
+        //render.material.SetColor("_EmissionColor", Color.green);
         ps.Emit(3);
         StartCoroutine(ChangeColor());
     }
     private void OnParticleTrigger()
     {
 
-        Debug.Log("paricle trugger");
     }
 
     /*private void OnTriggerEnter(Collider other)
@@ -53,8 +54,8 @@ public class PowerUp : MonoBehaviour
     private IEnumerator ChangeColor()
     {
         yield return new WaitForSeconds(1);
-        render.material.color = Color.white;
-        render.material.SetColor("_EmissionColor", Color.white);
+        //render.material.color = Color.green;
+        //render.material.SetColor("_EmissionColor", Color.green);
         transform.position = new Vector3(Random.Range(25,-25), Random.Range(2,33), Random.Range(25, -25));
     }
 }

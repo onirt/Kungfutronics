@@ -24,13 +24,15 @@ public class BH_MatchMoveTest : MonoBehaviour
 
     public void MatchResult(string stringResult, float matchResult, float ms)
     {
-        GameManager.DebugApp(stringResult);
+        GameManager.DebugApp("MatchMove" + stringResult);
         _render.material.color = Color.green;
+        transform.localScale = new Vector3(.5f,.5f,.5f);
         StartCoroutine(DelayOff());
     }
     IEnumerator DelayOff()
     {
         yield return new WaitForSeconds(1);
         _render.material.color = Color.white;
+        transform.localScale = Vector3.one;
     }
 }

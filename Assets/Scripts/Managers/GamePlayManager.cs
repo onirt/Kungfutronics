@@ -53,19 +53,13 @@ public class GamePlayManager: GameManager
     Material plataform;
     [SerializeField]
     AudioSource audioSource;
-    
-    public static GamePlayManager obj
-    {
-        get
-        {
-            return (GamePlayManager) _obj;
-        }
-    }
+
+    public static GamePlayManager obj;
 
     void Awake()
     {
         if (obj == null)
-            SetSingleton(this);
+            _obj = obj = this;
         ui = GetComponent<UIManager>();
         //configure = GetComponent<ConfigurationManager>();
         fogColor = RenderSettings.fogColor;

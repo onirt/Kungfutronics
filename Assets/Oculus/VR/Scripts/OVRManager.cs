@@ -1606,8 +1606,7 @@ public class OVRManager : MonoBehaviour
 			try
 			{
 				Debug.Log("[OVRManager] InputFocusLost event");
-				if (InputFocusLost != null)
-					InputFocusLost();
+				InputFocusLost?.Invoke();
 			}
 			catch (Exception e)
 			{

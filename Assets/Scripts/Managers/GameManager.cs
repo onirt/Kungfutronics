@@ -23,13 +23,6 @@ public abstract class GameManager : MonoBehaviour, IDebug
     }
     public static GameManager _obj;
 
-    public void SetSingleton(GameManager obj)
-    {
-        if (_obj == null)
-        {
-            _obj = obj;
-        }
-    }
     public static string APPTAG = "[Kungfutronics]";
     public virtual void Print(string tag, string message)
     {

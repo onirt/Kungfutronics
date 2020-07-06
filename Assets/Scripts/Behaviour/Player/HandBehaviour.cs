@@ -39,7 +39,7 @@ public class HandBehaviour : MonoBehaviour
 
     public static byte TwoHand;
 
-    private void OnEnable()
+    /*private void OnEnable()
     {
         VRGlyphInput.OnMatchResult += MatchGesture;
     }
@@ -47,10 +47,10 @@ public class HandBehaviour : MonoBehaviour
     {
 
         VRGlyphInput.OnMatchResult -= MatchGesture;
-    }
+    }*/
     public void MatchGesture(string result, float match, float ms)
     {
-
+        SendPower();
     }
     void Start()
     {
@@ -206,9 +206,9 @@ public class HandBehaviour : MonoBehaviour
         //StartCoroutine(hit.transform.GetComponent<EnemyBehaviour>().SetDamageWithDelay(count));
         //}
 
-        powerRay.trigger.SetCollider(0, hit.transform);
+        //powerRay.trigger.SetCollider(0, hit.transform);
         //Transform power = GameManager.obj.playerModel.InstantiatePowerPrefab(transform.position + transform.forward * 0.5f, transform.forward, count);
-        particlePower.power = count;
+        particlePower.power = 10 * (count + 1);
         //particleSeeker.target = power;
         particleSeeker.enabled = true;
 

@@ -74,7 +74,7 @@ public class VRGlyphInput : MonoBehaviour
     private float drawIndex = 0;
 
     [SerializeField]
-    ParticleSystem drawingTrail;
+    TrailRenderer drawingTrail;
 
     private float downX, downY, upX, upY;
 
@@ -122,9 +122,11 @@ public class VRGlyphInput : MonoBehaviour
         //presets.Add(new FGlyph("UserGlyph", "description", 100, 25, 1, centralizedNormalization, new List<List<Vector2>>() { new List<Vector2>() { new Vector2(0, 7378364f, 0, 5324807f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 2621636f, 0f), new Vector2(0, 6957321f, 1f) } }));
         //presets.Add(new FGlyph("UserGlyph", "description", 100, 25, 1, centralizedNormalization, new List<List<Vector2>>() { new List<Vector2>() { new Vector2(0, 4298874f, 0, 5324807f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 4654425f, 0f), new Vector2(0, 5701126f, 1f) } }));
         // Reset points cap if user changed it
-        presets.Add(new FGlyph("punch1", "description", 50, 25, 1, centralizedNormalization, new List<List<Vector2>>() { new List<Vector2>() { new Vector2(0.8789781f, 0.9921681f), new Vector2(0.8590137f, 0.6970502f), new Vector2(0.0674409f, 0f), new Vector2(0.0674409f, 0f), new Vector2(0.0674409f, 0f), new Vector2(0.0674409f, 0f), new Vector2(0.0674409f, 0f), new Vector2(0.0674409f, 0f), new Vector2(0.0674409f, 0f), new Vector2(0.0674409f, 0f), new Vector2(0.0674409f, 0f), new Vector2(0.0674409f, 0f), new Vector2(0.0674409f, 0f), new Vector2(0.0674409f, 0f), new Vector2(0.0674409f, 0f), new Vector2(0.0674409f, 0f), new Vector2(0.0674409f, 0f), new Vector2(0.0674409f, 0f), new Vector2(0.0674409f, 0f), new Vector2(0.0674409f, 0f), new Vector2(0.0674409f, 0f), new Vector2(0.0674409f, 0f), new Vector2(0.0674409f, 0f), new Vector2(0.0674409f, 0f), new Vector2(0.0674409f, 0f), new Vector2(0.0674409f, 0f), new Vector2(0.0674409f, 0f), new Vector2(0.0674409f, 0f), new Vector2(0.0674409f, 0f), new Vector2(0.0674409f, 0f), new Vector2(0.0674409f, 0f), new Vector2(0.0674409f, 0f), new Vector2(0.0674409f, 0f), new Vector2(0.0674409f, 0f), new Vector2(0.0674409f, 0f), new Vector2(0.0674409f, 0f), new Vector2(0.0674409f, 0f), new Vector2(0.0674409f, 0f), new Vector2(0.0674409f, 0f), new Vector2(0.0674409f, 0f), new Vector2(0.0674409f, 0f), new Vector2(0.0674409f, 0f), new Vector2(0.0674409f, 0f), new Vector2(0.0674409f, 0f), new Vector2(0.0674409f, 0f), new Vector2(0.0674409f, 0f), new Vector2(0.0674409f, 0f), new Vector2(0.0674409f, 0f), new Vector2(0.0674409f, 0f), new Vector2(0.9325591f, 1f) } }));
-        presets.Add(new FGlyph("punch2", "description", 50, 25, 1, centralizedNormalization, new List<List<Vector2>>() { new List<Vector2>() { new Vector2(0.2067159f, 0.05451685f), new Vector2(0.2694906f, -0.0257242f), new Vector2(0.2960103f, -0.1415544f), new Vector2(0.2824183f, -0.2475537f), new Vector2(0.258641f, -0.1382515f), new Vector2(0.2786439f, -0.03450223f), new Vector2(0.3019394f, 0.1143394f), new Vector2(0.3078094f, 0.2262359f), new Vector2(0.3034618f, 0.3314837f) } }));
-        presets.Add(new FGlyph("punch3", "description", 50, 25, 1, centralizedNormalization, new List<List<Vector2>>() { new List<Vector2>() { new Vector2(2.384475f, 0.05451685f), new Vector2(2.353824f, -0.04717578f), new Vector2(2.31217f, -0.1649035f), new Vector2(2.254224f, -0.2475537f), new Vector2(2.252222f, -0.1382515f), new Vector2(2.29472f, -0.03450223f), new Vector2(2.349015f, 0.1143394f), new Vector2(2.382955f, 0.2262359f), new Vector2(2.435572f, 0.3314837f) } }));
+        
+        presets.Add(new FGlyph("punch1", "description", 50, 25, 1, centralizedNormalization, new List<List<Vector2>>() { new List<Vector2>() { new Vector2(0.6620247f, 0.8766757f), new Vector2(0.8188381f, 0.7374161f), new Vector2(0.8726487f, 0.5391296f), new Vector2(0.1273514f, 0f), new Vector2(0.1273514f, 0f), new Vector2(0.1273514f, 0f), new Vector2(0.1273514f, 0f), new Vector2(0.1273514f, 0f), new Vector2(0.1273514f, 0f), new Vector2(0.1273514f, 0f), new Vector2(0.1273514f, 0f), new Vector2(0.1273514f, 0f), new Vector2(0.1273514f, 0f), new Vector2(0.1273514f, 0f), new Vector2(0.1273514f, 0f), new Vector2(0.1273514f, 0f), new Vector2(0.1273514f, 0f), new Vector2(0.1273514f, 0f), new Vector2(0.1273514f, 0f), new Vector2(0.1273514f, 0f), new Vector2(0.1273514f, 0f), new Vector2(0.1273514f, 0f), new Vector2(0.1273514f, 0f), new Vector2(0.1273514f, 0f), new Vector2(0.1273514f, 0f), new Vector2(0.1273514f, 0f), new Vector2(0.1273514f, 0f), new Vector2(0.1273514f, 0f), new Vector2(0.1273514f, 0f), new Vector2(0.1273514f, 0f), new Vector2(0.1273514f, 0f), new Vector2(0.1273514f, 0f), new Vector2(0.1273514f, 0f), new Vector2(0.1273514f, 0f), new Vector2(0.1273514f, 0f), new Vector2(0.1273514f, 0f), new Vector2(0.1273514f, 0f), new Vector2(0.1273514f, 0f), new Vector2(0.1273514f, 0f), new Vector2(0.1273514f, 0f), new Vector2(0.1273514f, 0f), new Vector2(0.1273514f, 0f), new Vector2(0.1273514f, 0f), new Vector2(0.1273514f, 0f), new Vector2(0.1273514f, 0f), new Vector2(0.1273514f, 0f), new Vector2(0.1273514f, 0f), new Vector2(0.1273514f, 0f), new Vector2(0.8042575f, 0.7669964f), new Vector2(0.8016594f, 1f) } }));
+        presets.Add(new FGlyph("punch2", "description", 50, 25, 1, centralizedNormalization, new List<List<Vector2>>() { new List<Vector2>() { new Vector2(0.6357911f, 0.6390329f), new Vector2(0.6683987f, 0.4849178f), new Vector2(0.7200547f, 0.3224848f), new Vector2(0.7597151f, 0.1637573f), new Vector2(0.7660269f, 0f), new Vector2(0.6784025f, 0.1240042f), new Vector2(0.7079639f, 0.2735455f), new Vector2(0.7212056f, 0.4258446f), new Vector2(0.7193356f, 0.6293047f), new Vector2(0.2339731f, 0.3081667f), new Vector2(0.2339731f, 0.3081667f), new Vector2(0.2339731f, 0.3081667f), new Vector2(0.2339731f, 0.3081667f), new Vector2(0.2339731f, 0.3081667f), new Vector2(0.2339731f, 0.3081667f), new Vector2(0.2339731f, 0.3081667f), new Vector2(0.2339731f, 0.3081667f), new Vector2(0.2339731f, 0.3081667f), new Vector2(0.2339731f, 0.3081667f), new Vector2(0.2339731f, 0.3081667f), new Vector2(0.2339731f, 0.3081667f), new Vector2(0.2339731f, 0.3081667f), new Vector2(0.2339731f, 0.3081667f), new Vector2(0.2339731f, 0.3081667f), new Vector2(0.2339731f, 0.3081667f), new Vector2(0.2339731f, 0.3081667f), new Vector2(0.2339731f, 0.3081667f), new Vector2(0.2339731f, 0.3081667f), new Vector2(0.2339731f, 0.3081667f), new Vector2(0.2339731f, 0.3081667f), new Vector2(0.2339731f, 0.3081667f), new Vector2(0.2339731f, 0.3081667f), new Vector2(0.2339731f, 0.3081667f), new Vector2(0.2339731f, 0.3081667f), new Vector2(0.2339731f, 0.3081667f), new Vector2(0.2339731f, 0.3081667f), new Vector2(0.2339731f, 0.3081667f), new Vector2(0.2339731f, 0.3081667f), new Vector2(0.2339731f, 0.3081667f), new Vector2(0.2339731f, 0.3081667f), new Vector2(0.2339731f, 0.3081667f), new Vector2(0.2339731f, 0.3081667f), new Vector2(0.2339731f, 0.3081667f), new Vector2(0.2339731f, 0.3081667f), new Vector2(0.2339731f, 0.3081667f), new Vector2(0.2339731f, 0.3081667f), new Vector2(0.2339731f, 0.3081667f), new Vector2(0.2339731f, 0.3081667f), new Vector2(0.6286139f, 0.8474994f), new Vector2(0.632883f, 1f) } }));
+        presets.Add(new FGlyph("punch3", "description", 50, 25, 1, centralizedNormalization, new List<List<Vector2>>() { new List<Vector2>() { new Vector2(0.746194f, 0.8407753f), new Vector2(0.7525688f, 0.6799536f), new Vector2(0.7157714f, 0.4890863f), new Vector2(0.658377f, 0.3153415f), new Vector2(0.5686434f, 0.1455605f), new Vector2(0.4863108f, 0f), new Vector2(0.5027928f, 0.1919306f), new Vector2(0.6017479f, 0.3609228f), new Vector2(0.7367817f, 0.5223241f), new Vector2(0.8411437f, 0.6435281f), new Vector2(0.9287753f, 0.7744723f), new Vector2(0.07122473f, 0.3000263f), new Vector2(0.07122473f, 0.3000263f), new Vector2(0.07122473f, 0.3000263f), new Vector2(0.07122473f, 0.3000263f), new Vector2(0.07122473f, 0.3000263f), new Vector2(0.07122473f, 0.3000263f), new Vector2(0.07122473f, 0.3000263f), new Vector2(0.07122473f, 0.3000263f), new Vector2(0.07122473f, 0.3000263f), new Vector2(0.07122473f, 0.3000263f), new Vector2(0.07122473f, 0.3000263f), new Vector2(0.07122473f, 0.3000263f), new Vector2(0.07122473f, 0.3000263f), new Vector2(0.07122473f, 0.3000263f), new Vector2(0.07122473f, 0.3000263f), new Vector2(0.07122473f, 0.3000263f), new Vector2(0.07122473f, 0.3000263f), new Vector2(0.07122473f, 0.3000263f), new Vector2(0.07122473f, 0.3000263f), new Vector2(0.07122473f, 0.3000263f), new Vector2(0.07122473f, 0.3000263f), new Vector2(0.07122473f, 0.3000263f), new Vector2(0.07122473f, 0.3000263f), new Vector2(0.07122473f, 0.3000263f), new Vector2(0.07122473f, 0.3000263f), new Vector2(0.07122473f, 0.3000263f), new Vector2(0.07122473f, 0.3000263f), new Vector2(0.07122473f, 0.3000263f), new Vector2(0.07122473f, 0.3000263f), new Vector2(0.07122473f, 0.3000263f), new Vector2(0.07122473f, 0.3000263f), new Vector2(0.07122473f, 0.3000263f), new Vector2(0.07122473f, 0.3000263f), new Vector2(0.07122473f, 0.3000263f), new Vector2(0.07122473f, 0.3000263f), new Vector2(0.07122473f, 0.3000263f), new Vector2(0.07122473f, 0.3000263f), new Vector2(0.07122473f, 0.3000263f), new Vector2(0.9144417f, 1f) } }));
+
         foreach (var item in presets)
         {
             item.pointsCap = pointsCap;
@@ -152,7 +154,7 @@ public class VRGlyphInput : MonoBehaviour
                 //First frame on which the button has been pressed
                 if (hand.touch > lastouch)
                 {
-                    drawingTrail.Play();
+                    drawingTrail.emitting = true;
 
                     for (int i = 0; i < 3; i++)
                     {
@@ -186,11 +188,15 @@ public class VRGlyphInput : MonoBehaviour
             }
             else
             {
-                drawingTrail.Stop();
+                drawingTrail.emitting = false;
             }
             //Since we allow more than 1 stroke, we can start matching only based on an event:
-            if (Input.GetKeyDown(KeyCode.KeypadEnter))
+            if (lastouch > hand.touch)
+            {
+                drawingTrail.emitting = false;
+
                 StartMatching();
+            }
         }
         //Single Stoke Matching
         else if (selectedNumberOfStrokes == NumberOfStrokes.Single)
@@ -213,7 +219,7 @@ public class VRGlyphInput : MonoBehaviour
                             textureDrawn[i] = false;
                             drawSize = 0;
                         }
-                        drawingTrail.Play();
+                        drawingTrail.emitting = true;
 
                         numberOfStrokes[i] = 1;
                         handCoords[i].Add(new List<Vector2>());
@@ -229,10 +235,13 @@ public class VRGlyphInput : MonoBehaviour
             }
             else
             {
-                drawingTrail.Stop();
+                drawingTrail.emitting = false;
+                //GameManager.DebugApp("1 Disabling trail hand " + hand.touch + " lastotuch: " + lastouch);
             }
             //Lift finger off the mouse, match: 
-            if (lastouch > hand.touch) {
+            if (lastouch > hand.touch)
+            {
+                drawingTrail.emitting = false;
                 StartMatching(); 
             }
         }
@@ -296,6 +305,7 @@ public class VRGlyphInput : MonoBehaviour
                     matchResult = matchResult / userGlyph[i].numberOfSquaresFilled * 100;
                     //Throw event
                     OnMatchResult?.Invoke(stringResult, matchResult, miliSecondsToMatch);
+                    hand.MatchGesture(stringResult, matchResult, miliSecondsToMatch);
 
                 }
 
@@ -403,7 +413,7 @@ public class VRGlyphInput : MonoBehaviour
         }
     }
 
-    private void OnGUI()
+    /*private void OnGUI()
     {
         if (drawOnGUI)
         {
@@ -425,7 +435,7 @@ public class VRGlyphInput : MonoBehaviour
                 GUI.TextField(new Rect(10, 10 + i * 200, 700, 100), "Presets available:\n" + aux + "\nPress KeyPadEnter to match | Press Esc to Clear: " + resultGUI + "\n Result (Float): " + matchResult + "% String: " + stringResult);
             }
         }
-    }
+    }*/
 
     /// <summary>
     /// What the function does it basically:

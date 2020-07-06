@@ -48,27 +48,24 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     GameObject Again;
     [SerializeField]
-    GameObject Exit;
+    GameObject Return;
     [SerializeField]
     Dropdown TimeSelection;
     [SerializeField]
     Dropdown SpawnTimeSelection;
-    [SerializeField]
-    Dropdown ModelSelection;
-    [SerializeField]
-    GameObject congrats;
-    [SerializeField]
-    GameObject MusicSyncPanel;
-    [SerializeField]
-    GameObject LevelsPanel;
     [SerializeField]
     Toggle MusicSync;
     [SerializeField]
     Slider playerHealthBar;
 
 
-
+    private float fixedDeltaTime;
     private float pointsTimer = 3;
+    private void Awake()
+    {
+
+        fixedDeltaTime = Time.fixedDeltaTime;
+    }
     private void Start()
     {
         GamePlayManager.obj.gameEnded += GameEnded;
@@ -92,6 +89,20 @@ public class UIManager : MonoBehaviour
         SetValues(model);
         canvas.transform.position = new Vector3(canvas.transform.position.x, GameManager.obj.player.position.y + 0.5f, canvas.transform.position.z);
         */
+    }
+    public void ReturnMenuDisplay(bool display)
+    {
+        Return.SetActive(display);
+        if (display)
+        {
+            Time.timeScale = 0;
+            Time.fixedDeltaTime = fixedDeltaTime * Time.timeScale;
+        }
+        else
+        {
+            Time.timeScale = 1;
+            Time.fixedDeltaTime = fixedDeltaTime * Time.timeScale;
+        }
     }
     private void OnDestroy()
     {
@@ -212,7 +223,6 @@ public class UIManager : MonoBehaviour
     {
         Again.SetActive(true);
         //Exit.SetActive(true);
-        congrats.SetActive(true);
         for (int i = 0; i < Points.Length; i++)
         {
             Points[i].transform.position +=  Vector3.up * 5;
@@ -320,7 +330,6 @@ public class UIManager : MonoBehaviour
     private void RefreshMusicOnUI()
     {
         if (lockValues) return;
-        MusicSyncPanel.SetActive(!MusicSync.isOn);
         Delay.gameObject.SetActive(MusicSync.isOn);
         if (MusicSync.isOn)
         {

@@ -18,11 +18,12 @@ public class CalibratorManager : GameManager
     private Transform calibrateLeftRef;
     [SerializeField]
     private Transform calibrateRightRef;
-
+    
+    public static CalibratorManager obj;
     void Awake()
     {
-        if (_obj == null)
-            SetSingleton(this);
+        if (obj == null)
+            _obj = obj = this;
     }
     void Start()
     {
@@ -63,4 +64,5 @@ public class CalibratorManager : GameManager
     {
         debug.text += message +  "\n";
     }
+
 }

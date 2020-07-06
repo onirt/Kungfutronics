@@ -38,7 +38,6 @@ public class SparkBehaviour : MonoBehaviour
         }
         else  if (other.tag == "Hand")
         {
-            Debug.Log("Hand collision detected...................");
             pathBehaviour.enabled = false;
 
             //Vector3 dir = -(other.GetContact(0).point - transform.position).normalized;

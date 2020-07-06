@@ -1,9 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyBehaviour : MonoBehaviour
 {
+    [SerializeField]
+    Text healttext;
+    [SerializeField]
+    Slider slider;
     [SerializeField]
     bool passive;
     /*[SerializeField]
@@ -19,10 +24,13 @@ public class EnemyBehaviour : MonoBehaviour
     Transform closest = null;
 
     public int healt = 100;
+    int maxHealth;
     bool busy;
     // Start is called before the first frame update
     void Start()
     {
+        slider.value = slider.maxValue = maxHealth = healt;
+        healttext.text = healt + "";
         animator = GetComponent<Animator>();
         float randomIdleStart = Random.Range(0, animator.GetCurrentAnimatorStateInfo(0).length);
         animator.Play("Idle", 0, randomIdleStart);
@@ -104,6 +112,8 @@ public class EnemyBehaviour : MonoBehaviour
     public void SetDamage(int amount)
     {
         healt-=amount;
+        slider.value = healt;
+        healttext.text = healt + "";
         animator.applyRootMotion = true;
         if (healt <= 0)
         {
@@ -116,7 +126,7 @@ public class EnemyBehaviour : MonoBehaviour
         {
             animator.SetTrigger("Damage");
         }
-        Color newcolor = Color.Lerp(Color.white, Color.red, healt / 10f);
+        Color newcolor = Color.Lerp(Color.white, Color.red, healt / maxHealth);
         //_render.material.color = newcolor;
 
         _render.material.SetColor("Color_1B56DF8C", newcolor);

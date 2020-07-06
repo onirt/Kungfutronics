@@ -4722,23 +4722,6 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &448878643022793889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7352139824367412603}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36e9022fa0bea9d4b8a764c4f083dfe8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  force: 100
-  _particleSystem: {fileID: 0}
-  amount: 1
-  NotHealth: 1
 --- !u!95 &8980360529200876718
 Animator:
   serializedVersion: 3
@@ -4768,6 +4751,36 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1cfd44c15875c2b4da525ce9d47b8ea6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amount: 1
+--- !u!114 &448878643022793889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7352139824367412603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36e9022fa0bea9d4b8a764c4f083dfe8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  force: 100
+  _particleSystem: {fileID: 210673999838894596}
+  amount: 1
+  NotHealth: 1
+--- !u!114 &2557839237573845190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7352139824367412603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f27049e06b4e1014fa8e526c1c35f2af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1524997484523519090
@@ -4861,6 +4874,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: health_prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 626d8558b5de90241ba683ad75ba0421,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 626d8558b5de90241ba683ad75ba0421, type: 3}

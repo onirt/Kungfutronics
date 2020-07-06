@@ -22,10 +22,34 @@ public class InputPlayerManager : MonoBehaviour
     }
     void Update()
     {
-        if (OVRInput.Get(OVRInput.Button.One))
+        if (IsRightie()) {
+            //Debug.Log("Is Right Hand");
+            if (OVRInput.Get(OVRInput.Button.One) || OVRInput.Get(OVRInput.Button.Two))
+            {
+                //GameManager.obj.ui.ShowInterface();
+                GamePlayManager.obj.ui.ReturnMenuDisplay(true);
+            }
+        }
+        else
         {
-            //GameManager.obj.ui.ShowInterface();
-            SceneManager.LoadScene("Main");
+            if (OVRInput.Get(OVRInput.RawButton.X) || OVRInput.Get(OVRInput.RawButton.Y))
+            {
+                //GameManager.obj.ui.ShowInterface();
+                GamePlayManager.obj.ui.ReturnMenuDisplay(true);
+            }
         }
     }
+    public bool IsRightie()
+    {
+        OVRPlugin.Handedness handedness = OVRPlugin.GetDominantHand();
+        if (handedness == OVRPlugin.Handedness.RightHanded)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
 }

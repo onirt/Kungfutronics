@@ -6,7 +6,9 @@ public class HealthAnimStartBehaviour : MonoBehaviour
 {
     float threshold;
     float currentTime;
-    Animator animator;
+    Animator animator; 
+    public int amount = 1;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -28,5 +30,11 @@ public class HealthAnimStartBehaviour : MonoBehaviour
     {
 
     }
-
+    /*private void OnParticleCollision(GameObject other)
+    {
+        
+            GamePlayManager.obj.playerHealth += amount;
+            GamePlayManager.obj.ui.UpdateHealthBar(GamePlayManager.obj.playerHealth);
+        
+    }*/
 }

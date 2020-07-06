@@ -7,6 +7,10 @@ using UnityEngine.UI;
 
 public class StartManager : MonoBehaviour
 {
+    [SerializeField]
+    GameObject warning;
+    [SerializeField]
+    GameObject LevelsPanel;
     public int testLevel;
     public Text scoreBoard;
     private void Start()
@@ -19,6 +23,23 @@ public class StartManager : MonoBehaviour
             }
         }
         //Invoke("Test", 5);
+        //OVRInput.GetConnectedControllers();
+        //Debug.Log("Connected controllers: " + OVRInput.GetConnectedControllers().ToString());
+
+        LevelsPanel.SetActive(true);
+    }
+    private void Update()
+    {
+        /*if (OVRInput.IsControllerConnected(OVRInput.Controller.RTouch) && OVRInput.IsControllerConnected(OVRInput.Controller.LHand))
+        {
+            warning.SetActive(false);
+            LevelsPanel.SetActive(true);
+        }
+        else
+        {
+            warning.SetActive(true);
+            LevelsPanel.SetActive(false);
+        }*/
     }
     private void Test()
     {
