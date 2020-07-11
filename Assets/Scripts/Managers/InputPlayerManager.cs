@@ -24,7 +24,7 @@ public class InputPlayerManager : MonoBehaviour
     {
         if (IsRightie()) {
             //Debug.Log("Is Right Hand");
-            if (OVRInput.Get(OVRInput.Button.One) || OVRInput.Get(OVRInput.Button.Two))
+            if (OVRInput.Get(OVRInput.Button.One) || OVRInput.Get(OVRInput.Button.Two) || OVRInput.Get(OVRInput.Button.Start))
             {
                 //GameManager.obj.ui.ShowInterface();
                 GamePlayManager.obj.ui.ReturnMenuDisplay(true);
@@ -32,7 +32,7 @@ public class InputPlayerManager : MonoBehaviour
         }
         else
         {
-            if (OVRInput.Get(OVRInput.RawButton.X) || OVRInput.Get(OVRInput.RawButton.Y))
+            if (OVRInput.Get(OVRInput.RawButton.X) || OVRInput.Get(OVRInput.RawButton.Y) || OVRInput.Get(OVRInput.Button.Start))
             {
                 //GameManager.obj.ui.ShowInterface();
                 GamePlayManager.obj.ui.ReturnMenuDisplay(true);

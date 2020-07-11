@@ -2,12 +2,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
+
 public class HandBehaviour : MonoBehaviour
 {
     [SerializeField]
     public OVRInput.Controller m_controller = OVRInput.Controller.None;
 
     public float touch;
+    public float touch2;
 
     [SerializeField]
     Renderer meshRenderer;
@@ -112,17 +115,18 @@ public class HandBehaviour : MonoBehaviour
     }
     void LateUpdate()
     {
-        if (count == 0)
+        /*if (count == 0)
         {
             return;
-        }
+        }*/
 
-        touch = OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, m_controller);
+        touch = OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, m_controller);
+        touch2 = OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, m_controller);
         //trail.enabled = touch > 0;
-        if (touch == 0)
+        /*if (touch2 == 0)
         {
             return;
-        }
+        }*/
         //SendPower();
         //trail.startColor = GetColor();
         /* Vector3 deltaPosition = transform.position - lastPosition;
@@ -148,9 +152,14 @@ public class HandBehaviour : MonoBehaviour
          else
          {
              detectorIndex &= ~3;
-         }
-         lastPosition = transform.position;*/
+         }*/
+         //lastPosition = transform.position;
     }
+    /*private void FixedUpdate()
+    {
+
+        lastPosition = transform.position;
+    }*/
     /*private void OnDrawGizmos()
     {
         Vector3 boxScale = new Vector3(size, size, size);
@@ -166,35 +175,70 @@ public class HandBehaviour : MonoBehaviour
             Gizmos.DrawRay(transform.position, transform.forward * maxDistance);
         }
     }*/
-    private void OnTriggerEnter(Collider other)
+    /*private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "Spark")
+        
+        ProcessSparkContact(other.gameObject);
+    }*/
+    private void OnCollisionEnter(Collision collision)
+    {
+        ProcessSparkContact(collision);
+    }
+    private void ProcessSparkContact(Collision collision)
+    {
+        if (collision.rigidbody.tag == "Spark")
         {
-            audioSouce.clip = other.GetComponent<SparkBehaviour>().sparkModel.sound;
-            audioSouce.Play();
-            StartParticles();
-            SetCount();
-            GamePlayManager.obj.SetPoints(100);
-            Destroy(other.gameObject);
-        }
-        else if (other.tag == "Virus")
-        {
-
-            SparkBehaviour sparkBehaviour = other.GetComponent<SparkBehaviour>();
-            if (sparkBehaviour != null)
+            SparkBehaviour spark = collision.rigidbody.GetComponent<SparkBehaviour>();
+            if (spark.hitted) return;
+            if (touch2 == 0)
             {
-                audioSouce.clip = sparkBehaviour.sparkModel.sound;
+                GameManager._obj.Print("FORCE", "Spark collision detected but for consume");
+                audioSouce.clip = spark.sparkModel.sound;
+                audioSouce.Play();
+                StartParticles();
+                SetCount();
+                GamePlayManager.obj.SetPoints(100);
+                Destroy(collision.gameObject);
             }
             else
             {
-                BH_Virus bh = other.GetComponent<BH_Virus>();
-                if (bh == null) return;
-                audioSouce.clip = bh.virus.sound;
+                GameManager._obj.Print("FORCE", "Spark collision detected");
+                Pushhit(spark, collision.contacts[0].normal);
             }
-            audioSouce.Play();
-
-            Destroy(other.gameObject);
         }
+        else if (collision.rigidbody.tag == "Virus")
+        {
+            SparkBehaviour spark = collision.rigidbody.GetComponent<SparkBehaviour>();
+            if (spark.hitted) return;
+            if (touch2 == 0)
+            {
+                GameManager._obj.Print("FORCE", "Virus collision detected but for consume");
+                if (spark != null)
+                {
+                    audioSouce.clip = spark.sparkModel.sound;
+                }
+                else
+                {
+                    BH_Virus bh = collision.rigidbody.GetComponent<BH_Virus>();
+                    if (bh == null) return;
+                    audioSouce.clip = bh.virus.sound;
+                }
+                audioSouce.Play();
+                Destroy(collision.gameObject);
+            }
+            else
+            {
+                GameManager._obj.Print("FORCE", "Virus collision detected");
+                Pushhit(spark, collision.contacts[0].normal);
+            }
+        }
+    }
+    private void Pushhit(SparkBehaviour spark, Vector3 contact)
+    {
+        //Vector3 direction = transform.position - lastPosition;
+        Vector3 force =  -10000  * contact;
+        //GameManager._obj.Print("FORCE", force.ToString() + " contact: " + contact + " direction: " + direction);
+        spark.hitDirection = force;    
     }
     public void SendPower()
     {

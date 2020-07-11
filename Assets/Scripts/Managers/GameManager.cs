@@ -23,14 +23,14 @@ public abstract class GameManager : MonoBehaviour, IDebug
     }
     public static GameManager _obj;
 
-    public static string APPTAG = "[Kungfutronics]";
+    public static string APPTAG = "Kungfutronics";
     public virtual void Print(string tag, string message)
     {
-        if (filterTag == "" || filterTag == tag)
-        {
-            Debug.Log(APPTAG + ":  " + message);
-            SetMessage(message);
-        }
+        //if (filterTag == "" || filterTag == tag)
+        //{
+            Debug.Log("[" + APPTAG + ":" + tag + "]: " + message);
+            //SetMessage(message);
+        //}
     }
 
     public static void DebugApp( string message)

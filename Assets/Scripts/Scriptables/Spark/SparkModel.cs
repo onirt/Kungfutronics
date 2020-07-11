@@ -23,6 +23,7 @@ public class SparkModel : ScriptableObject
     public float maxScale;
     public int points;
     public float force;
+    public float multiplier = 6f;
     public GameObject prefab;
     public bool debug;
     public AudioClip sound; 

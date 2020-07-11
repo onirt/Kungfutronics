@@ -8,12 +8,33 @@ public class SeekBehaviour : MonoBehaviour
 
     public Transform target;
     public int mode = 0;
+    private Rigidbody _rigidbody;
+    [SerializeField]
+    private float sensitivity = 100f;
+    private Vector3 velocity;
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (mode == 3)
+        {
+            _rigidbody = GetComponent<Rigidbody>();
+        }
+
     }
 
+    private void FixedUpdate()
+    {
+        if (mode == 3)
+        {
+            Vector3 destination = target.transform.position;
+            _rigidbody.transform.rotation = transform.rotation;
+
+            velocity = (destination - _rigidbody.transform.position) * sensitivity;
+
+            _rigidbody.velocity = velocity;
+            transform.rotation = target.transform.rotation;
+        }
+    }
     // Update is called once per frame
     void LateUpdate()
     {

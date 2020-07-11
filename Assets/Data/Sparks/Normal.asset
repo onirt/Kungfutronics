@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   life: 2.44
-  defaultLife: 0.76
+  defaultLife: 5
   minThreshold: 0.2
   maxThreshold: 3
   scale: 0.19
@@ -23,6 +23,7 @@ MonoBehaviour:
   maxScale: 1
   points: 10
   force: 650
+  multiplier: 6
   prefab: {fileID: 1479235847433426829, guid: 71654565dc4263343bb819157832591b, type: 3}
   debug: 0
   sound: {fileID: 8300000, guid: 540693ae54a28e94da66ae3de985a645, type: 3}
