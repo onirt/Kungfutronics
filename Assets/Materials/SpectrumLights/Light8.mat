@@ -104,7 +104,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_DADA8D09: {r: 0.45443958, g: 0, b: 0.45443958, a: 1}
+    - Color_DADA8D09: {r: 0.0000026675193, g: 0, b: 0.0000026675193, a: 1}
     - _BaseColor: {r: 0, g: 0, b: 1, a: 1}
     - _Color: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0.2072227, a: 1}

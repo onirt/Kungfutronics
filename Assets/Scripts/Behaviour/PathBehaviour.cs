@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PathBehaviour : MonoBehaviour
 {
@@ -21,9 +19,11 @@ public class PathBehaviour : MonoBehaviour
 
     public BH_SpawnSpark spawnSpark;
 
+    private Vector3 currentDirection;
     void Start()
     {
         currentPoint = 1;
+        currentDirection = (pathModel.points[currentPoint] - transform.position).normalized;
     }
     private void OnDestroy()
     {
@@ -31,15 +31,17 @@ public class PathBehaviour : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
         //if (stop) return;
         if ((GamePlayManager.isPlaying() || haveFreePass) && !stop)
         {
             if (pathModel == null) return;
             //distanceTravelled += speed * Time.deltaTime;
-            transform.Translate((pathModel.points[currentPoint] - transform.position).normalized * speed * Time.deltaTime);
-            if (Vector3.Distance(transform.position, pathModel.points[currentPoint]) < 0.05f)
+            transform.Translate(currentDirection * speed * Time.deltaTime);
+            float distance = Vector3.Distance(transform.position, pathModel.points[currentPoint]);
+            //GameManager._obj.Print("PATH", "distance: " + distance + " name: " + name);
+            if (distance < 0.1f)
             {
                 currentPoint++;
                 if (currentPoint >= pathModel.points.Length)
@@ -47,6 +49,10 @@ public class PathBehaviour : MonoBehaviour
                     spawnSpark.RestoreColors();
                     stop = true;
                     reached?.Invoke();
+                }
+                else
+                {
+                    currentDirection = (pathModel.points[currentPoint] - transform.position).normalized;
                 }
             }
         }

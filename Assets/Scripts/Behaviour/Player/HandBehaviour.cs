@@ -22,6 +22,8 @@ public class HandBehaviour : MonoBehaviour
     [SerializeField]
     ParticleSystem powerRay;
     [SerializeField]
+    ParticleSystem hitSparks;
+    [SerializeField]
     ParticleSeeker particleSeeker;
     [SerializeField]
     Transform targeting;
@@ -53,6 +55,7 @@ public class HandBehaviour : MonoBehaviour
     }*/
     public void MatchGesture(string result, float match, float ms)
     {
+        if (count > 0)
         SendPower();
     }
     void Start()
@@ -192,7 +195,6 @@ public class HandBehaviour : MonoBehaviour
             if (spark.hitted) return;
             if (touch2 == 0)
             {
-                GameManager._obj.Print("FORCE", "Spark collision detected but for consume");
                 audioSouce.clip = spark.sparkModel.sound;
                 audioSouce.Play();
                 StartParticles();
@@ -202,9 +204,9 @@ public class HandBehaviour : MonoBehaviour
             }
             else
             {
-                GameManager._obj.Print("FORCE", "Spark collision detected");
                 Pushhit(spark, collision.contacts[0].normal);
             }
+            hitSparks.Emit(5);
         }
         else if (collision.rigidbody.tag == "Virus")
         {
@@ -212,7 +214,6 @@ public class HandBehaviour : MonoBehaviour
             if (spark.hitted) return;
             if (touch2 == 0)
             {
-                GameManager._obj.Print("FORCE", "Virus collision detected but for consume");
                 if (spark != null)
                 {
                     audioSouce.clip = spark.sparkModel.sound;
@@ -228,9 +229,9 @@ public class HandBehaviour : MonoBehaviour
             }
             else
             {
-                GameManager._obj.Print("FORCE", "Virus collision detected");
                 Pushhit(spark, collision.contacts[0].normal);
             }
+            hitSparks.Emit(5);
         }
     }
     private void Pushhit(SparkBehaviour spark, Vector3 contact)
@@ -256,7 +257,7 @@ public class HandBehaviour : MonoBehaviour
         //particleSeeker.target = power;
         particleSeeker.enabled = true;
 
-        powerRay.Emit(1);
+        powerRay.Emit(Math.Max(1,count - 3));
         Debug.Log("Emit: " + count);
         //}
 

@@ -16,17 +16,17 @@ public class PowerBehaviour : MonoBehaviour
 
         collisionEvents = new List<ParticleCollisionEvent>();
         var velocityOverLifetime = ps.velocityOverLifetime;
-        velocityOverLifetime.xMultiplier += (GameManager._obj.level - 1) * 5;
-        velocityOverLifetime.yMultiplier += (GameManager._obj.level - 1) * 5;
-        velocityOverLifetime.zMultiplier += (GameManager._obj.level - 1) * 5;
+        velocityOverLifetime.xMultiplier += (GameManager._obj.level - 1) * 7;
+        velocityOverLifetime.yMultiplier += (GameManager._obj.level - 1) * 7;
+        velocityOverLifetime.zMultiplier += (GameManager._obj.level - 1) * 7;
     }
 
-    void Update()
+    /*void Update()
     {
         if (speed > 0)
             transform.position += transform.forward * Time.deltaTime * speed;
 
-    }
+    }*/
     private void OnParticleCollision(GameObject other)
     {
         if (other.tag == "Enemy")
@@ -40,12 +40,8 @@ public class PowerBehaviour : MonoBehaviour
 
         }
     }
-    private void OnTriggerEnter(Collider other)
+    /*private void OnTriggerEnter(Collider other)
     {
-        /*if (other.tag == "Enemy")
-        {
-            other.GetComponent<EnemyBehaviour>().SetDamage(power);
-        }*/
         Destroy(gameObject);
-    }
+    }*/
 }

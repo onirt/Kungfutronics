@@ -81,7 +81,7 @@ public class EnemyBehaviour : MonoBehaviour
                     closest.gameObject.GetComponent<SparkBehaviour>().sparkModel = virus;
 
                 }*/
-                if (closest == null) closest = GamePlayManager.obj.player;
+                
                 StartAttack();
             }
             else if (closest != null)
@@ -95,6 +95,10 @@ public class EnemyBehaviour : MonoBehaviour
     GameObject virus;
     protected virtual void StartAttack()
     {
+        if (closest == null)
+        {
+            closest = GamePlayManager.obj.player;
+        }
         busy = true;
         transform.LookAt(new Vector3(closest.position.x, transform.position.y, closest.position.z));
         animator.SetTrigger("Cast");

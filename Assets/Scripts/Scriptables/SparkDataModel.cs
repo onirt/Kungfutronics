@@ -28,6 +28,7 @@ public class SparkDataModel : ScriptableObject
 
         float scale = models[selectedModel].GetScale();
         newObject.transform.localScale = new Vector3(scale, scale, scale);
+        newObject.name = "spark_" + Time.time;
 
     }
 }

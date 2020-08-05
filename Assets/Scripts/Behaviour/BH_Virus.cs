@@ -25,7 +25,7 @@ public class BH_Virus : MonoBehaviour
         {
             if (target != null)
             {
-                float speed = target.tag == "Player" ? 0.1f : 0.5f;
+                float speed = target.tag == "Player" ? 0.05f : 0.5f;
                 transform.position = Vector3.Lerp(transform.position, target.position, speed);
                 //currentSpeed += Time.deltaTime;
             }
@@ -66,7 +66,12 @@ public class BH_Virus : MonoBehaviour
             other.gameObject.AddComponent<NotSparkBehaviour>().ChangeColor();
             other.gameObject.GetComponent<SparkBehaviour>().sparkModel = virus;
             other.gameObject.GetComponent<PathBehaviour>().spawnSpark.SetInfectedColors();
-            Destroy(gameObject);
         }
+        else if (other.tag == "Player")
+        {
+            GamePlayManager.obj.Damage(1, GamePlayManager.obj.playerModel.damage);
+        }
+        Destroy(gameObject);
     }
+
 }

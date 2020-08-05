@@ -121,8 +121,10 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 1.0.2d
-  preloadedAssets: []
+  bundleVersion: 1.0.2g
+  preloadedAssets:
+  - {fileID: 1220216008182479233, guid: 079ee852de202cd4db70e486125ebb92, type: 2}
+  - {fileID: 11400000, guid: 1ecb351bc8b269e4bb5b66f34693267c, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -167,7 +169,7 @@ PlayerSettings:
   applicationIdentifier:
     Android: com.trinoparra.kungfutronics
   buildNumber: {}
-  AndroidBundleVersionCode: 7
+  AndroidBundleVersionCode: 9
   AndroidMinSdkVersion: 21
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 0
